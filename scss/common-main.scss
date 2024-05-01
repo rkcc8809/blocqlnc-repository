@@ -1,0 +1,503 @@
+@charset "UTF-8";
+
+@use "foundation";
+
+@use "global" as g;
+
+// common-main
+
+.initial-text {
+  @include g.font-en-b;
+  @include g.font-36-96__0;
+  color: g.$cBrand-color;
+}
+
+.ttl__sub {
+  @include g.font-jp-b;
+  @include g.font-16-32__15;
+}
+
+.s-ttl__sub {
+  @include g.font-jp-b;
+  @include g.font-14-36__15;
+  display: block;
+  color: g.$cWhite;
+}
+
+.c-ttl {
+  @include g.font-en-b;
+  @include g.font-20-48__15;
+  text-align: center;
+}
+
+.__inner {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.__inner2 {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.__inner3 {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.__inner4 {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.__inner5 {
+  width: 72.5%;
+  margin: 0 auto;
+}
+
+.__section1 {
+  margin: 10% 0;
+}
+
+.__section2 {
+  margin: 2.5% 0;
+}
+
+.__section3 {
+  margin: 7.5% 0;
+}
+
+.__section4 {
+  margin-top: 10%;
+}
+
+.outer-btn-s {
+  width: 300px;
+  height: 85px;
+  background: linear-gradient(
+    to bottom right,
+    g.$cBrand-color-2,
+    g.$cBrand-color
+  );
+  border-radius: 50px;
+  padding: 2px;
+}
+
+.inner-btn-s {
+  width: 300px;
+  height: 85px;
+  background: g.$background-main;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.__arrow {
+  height: 100%;
+  @include g.flex(center);
+  @include g.font-32-15;
+  background-image: linear-gradient(
+    to bottom right,
+    g.$cBrand-color-2,
+    g.$cBrand-color
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  gap: 60px;
+  position: relative;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.fadeOut {
+  animation: fadeOutAnime 0.2s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeOutAnime {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+.fadeIn {
+  animation: fadeInAnime 0.2s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.__text {
+  margin-top: -5px;
+}
+
+.__icon-arrow svg {
+  transform: rotate(90deg);
+}
+
+.__icon-arrow__rev svg {
+  transform: rotate(-90deg);
+}
+
+.simple1-1 {
+  position: relative;
+  opacity: 1;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.arrow-part1 {
+  display: block;
+  width: 24px; /* 横線部分の幅 */
+  height: 4px; /* 横線部分の高さ */
+  background-color: g.$cBrand-color;
+}
+
+.diagonal-line1,
+.diagonal-line2 {
+  display: block;
+  width: 12px; /* 斜め線の長さ */
+  height: 4px; /* 斜め線の太さ */
+  background-color: g.$cBrand-color; /* 斜め線の色 */
+  position: absolute;
+  right: 0;
+  transition: all 0.2s;
+}
+
+.diagonal-line1 {
+  transform: rotate(45deg); /* 斜め線の角度調整 */
+  top: -4.8px; /* 上からの位置 */
+}
+
+.diagonal-line2 {
+  transform: rotate(-45deg); /* 斜め線の角度調整 */
+  top: 4.8px; /* 上からの位置 */
+}
+
+// ここまで
+
+.r-btn {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.w-btn {
+  width: 8.75rem;
+  & a {
+    display: block;
+    background-color: g.$cWhite;
+    color: g.$background-main;
+    text-align: center;
+    cursor: pointer;
+    @include g.font-16-15;
+    line-height: 2.5;
+    & span {
+      margin: 0 2.5%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    & span:nth-of-type(1) {
+      margin-top: -5px;
+    }
+    & .__icon-arrow {
+      margin-top: -7px;
+      & svg {
+        font-size: 0.625rem;
+      }
+    }
+  }
+}
+
+.w-btn2 {
+  width: 401px;
+  & a {
+    display: block;
+    background-color: g.$cWhite;
+    color: g.$background-main;
+    text-align: center;
+    cursor: pointer;
+    @include g.font-30-15;
+    line-height: 3.15;
+    & span {
+      margin: 0 2.5%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    & span:nth-of-type(2) {
+      margin-top: -12px;
+    }
+    & .__icon-arrow__rev {
+      margin-top: -20px;
+      & svg {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.b-btn {
+  width: 401px;
+  & a {
+    display: block;
+    background-color: g.$cBlack;
+    color: g.$cWhite;
+    text-align: center;
+    cursor: pointer;
+    @include g.font-30-15;
+    line-height: 3.15;
+  }
+}
+
+.c-btn {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// header
+.header {
+  &-wrap {
+    position: fixed;
+    width: 100%;
+    @include g.flex;
+    background-color: g.$background-main;
+    z-index: 100;
+    height: 77px;
+
+    &__logo {
+      width: 159px;
+      padding-left: 1.5%;
+
+      & a {
+        & img {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+    }
+
+    &__nav {
+      width: 45%;
+      padding-right: 3%;
+
+      &__list {
+        @include g.flex;
+
+        &__item {
+          & a {
+            font-weight: 700;
+            display: block;
+            @include g.font-15-15;
+          }
+
+          &__contact {
+            width: 25%;
+            white-space: nowrap;
+
+            & a {
+              background-color: g.$cBrand-color;
+              padding: 7.5% 30%;
+              @include g.font-17-15;
+              &:hover {
+                background-color: g.$cWhite;
+                color: g.$cBrand-color;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// our
+.our {
+  &-wrap {
+    background-image: url(../img/our-missing.jpeg);
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 524px;
+    &::after {
+      content: "";
+      background-color: rgba(17, 8, 0, 0.9);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__ttl {
+      position: absolute;
+      z-index: 1;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 100%;
+
+      & h2 {
+        @include g.font-en-b;
+        @include g.font-20-48__0;
+      }
+
+      & p {
+        line-height: 1.7;
+        width: 100%;
+        margin-top: 50px;
+        @include g.font-10-24__15;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// footer
+.footer {
+  background-image: url(../img/footer-bg.jpeg);
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    background-color: rgba(17, 8, 0, 0.8);
+  }
+
+  &-wrap {
+    padding: 4% 0 2%;
+    &__btn {
+      &__circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: g.$cBrand-color;
+        margin-left: auto;
+        margin-right: 0;
+        & a {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          & svg {
+            width: 35px;
+            height: 35px;
+          }
+        }
+      }
+    }
+
+    &__con {
+      display: flex;
+      &__left {
+        width: 60%;
+        & h2 {
+          @include g.font-en-b;
+          @include g.font-24-48__15;
+          & span {
+            @include g.font-jp-b;
+            @include g.font-12-24__15;
+            display: block;
+            font-weight: 500;
+            line-height: 3;
+          }
+        }
+      }
+      &__right {
+        &__btn {
+          width: 300px;
+          height: 90px;
+          & a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: g.$cBrand-color;
+            border-radius: 6px;
+            width: 100%;
+            height: 100%;
+            @include g.font-en-b;
+            @include g.font-30-15;
+            &:hover {
+              background-color: g.$cWhite;
+              color: g.$cBrand-color;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    &__link {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15%;
+      &__logo {
+        width: 20%;
+        &__first {
+          & img {
+            width: 100%;
+            display: block;
+          }
+        }
+        &__second {
+          & p {
+            @include g.font-10-15__15;
+            line-height: 4;
+          }
+        }
+      }
+      &__nav {
+        width: 40%;
+        &__list {
+          display: flex;
+          justify-content: space-between;
+          &__item {
+            margin-left: 8%;
+            & a {
+              @include g.font-14-15__15;
+            }
+          }
+        }
+      }
+    }
+
+    &__copyright {
+      text-align: center;
+      & small {
+        @include g.font-10-15__15;
+        @include g.font-en-b;
+        font-weight: 500;
+      }
+    }
+  }
+}

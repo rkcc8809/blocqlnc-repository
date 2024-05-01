@@ -1,0 +1,28 @@
+@use "../global/" as *;
+
+html {
+  font-size: 100%;
+}
+
+body {
+  @include font-jp-b;
+  background-color: $background-main;
+  line-height: 1;
+  letter-spacing: 0;
+  word-break: break-all;
+  color: $cWhite;
+}
+
+a {
+  text-decoration: none;
+  color: $cWhite;
+  transition: all 0.7s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+li {
+  list-style: none;
+}

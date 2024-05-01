@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+@use "foundation";
+
+@use "global" as g;
+
+// common
+.initial-text__sub {
+  @include g.font-en-b;
+  @include g.font-36-96__15;
+  color: g.$cBrand-color;
+}
+
+.breadcrumb {
+  &-wrap {
+    &__nav {
+      &__list {
+        display: flex;
+        &__item {
+          margin-right: 10px;
+
+          vertical-align: middle;
+          & a {
+            @include g.font-en-b;
+            @include g.font-12-24__15;
+          }
+          & p {
+            @include g.font-en-b;
+            @include g.font-12-24__15;
+          }
+        }
+      }
+    }
+  }
+}
+
+// fea
+.fea {
+  &-wrap {
+    &__ttl {
+      position: relative;
+      & h2 {
+        @include g.font-16-32__15;
+        margin-left: 80px;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        width: 50px;
+        height: 5px;
+        top: 50%;
+        background-color: g.$cWhite;
+      }
+    }
+  }
+}

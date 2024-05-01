@@ -1,0 +1,76 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  background-color: #110800;
+  line-height: 1;
+  letter-spacing: 0;
+  word-break: break-all;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+li {
+  list-style: none;
+}
+
+.initial-text__sub {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.25rem, 1.227rem + 4.55vw, 6rem);
+  letter-spacing: clamp(-0.034rem, -0.018rem - 0.07vw, -0.09rem);
+  color: #fe4d02;
+}
+
+.breadcrumb-wrap__nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.breadcrumb-wrap__nav__list__item {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.breadcrumb-wrap__nav__list__item a {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.75rem, 0.545rem + 0.91vw, 1.5rem);
+  letter-spacing: clamp(-0.011rem, -0.008rem - 0.01vw, -0.022rem);
+}
+.breadcrumb-wrap__nav__list__item p {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.75rem, 0.545rem + 0.91vw, 1.5rem);
+  letter-spacing: clamp(-0.011rem, -0.008rem - 0.01vw, -0.022rem);
+}
+
+.fea-wrap__ttl {
+  position: relative;
+}
+.fea-wrap__ttl h2 {
+  font-size: clamp(1rem, 0.727rem + 1.21vw, 2rem);
+  letter-spacing: clamp(-0.015rem, -0.011rem - 0.02vw, -0.03rem);
+  margin-left: 80px;
+}
+.fea-wrap__ttl::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 5px;
+  top: 50%;
+  background-color: #fff;
+}

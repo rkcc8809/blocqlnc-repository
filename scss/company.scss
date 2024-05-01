@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+@use "foundation";
+
+@use "global" as g;
+
+// top
+.top {
+  &-wrap {
+    background-image: url("../img/company-bg.jpeg");
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 70vh;
+
+    &__ttl {
+      position: absolute;
+      top: 50%;
+      left: 7.5%;
+      transform: translateY(-25%);
+
+      & h1 {
+        @include g.font-en-b;
+        font-size: 3.5rem;
+        line-height: 1;
+        letter-spacing: 0;
+        @include g.font-20-56__15;
+      }
+    }
+  }
+}
+
+.greet {
+  &-wrap {
+    &__top {
+      &__img {
+        width: 60%;
+        margin: 0 auto;
+        aspect-ratio: 794 / 500;
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &__ttl {
+        margin: 2.5% 0;
+        text-align: center;
+        & h2 {
+          @include g.font-en-b;
+          @include g.font-20-48__15;
+          color: g.$cBrand-color;
+        }
+        & p {
+          @include g.font-14-24__15;
+          line-height: 2;
+          margin-top: 1.5%;
+          font-weight: 500;
+        }
+      }
+    }
+    &__bottom {
+      margin-top: 10%;
+      display: flex;
+      justify-content: space-between;
+      &__img {
+        width: 30%;
+        aspect-ratio: 1 / 1;
+        & img {
+          width: 100%;
+          display: block;
+          object-fit: cover;
+        }
+      }
+      &__txt {
+        width: 61.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & p {
+          font-family: "Shippori Mincho B1", serif;
+          &:nth-of-type(1) {
+            @include g.font-10-16__15;
+            font-weight: 600;
+            line-height: 2;
+          }
+          &:nth-of-type(2) {
+            @include g.font-16-36__15;
+            font-weight: 700;
+            margin-left: auto;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.intro {
+  overflow: hidden;
+  &-wrap {
+    &__ttl {
+      text-align: center;
+      & h2 {
+        @include g.font-20-48__15;
+      }
+      & p {
+        @include g.font-12-24__15;
+        font-weight: 400;
+        margin-top: 5%;
+        line-height: 1.7;
+      }
+    }
+
+    &__team {
+      width: 100%;
+      &__block {
+        &.__margin {
+          margin-top: -15%;
+        }
+        &.__rev {
+          background-color: g.$background-main;
+        }
+        width: 100vw;
+        margin: 0 calc(50% - 50vw);
+        height: 100%;
+        background-color: g.$cBrand-color;
+        padding: 10% 0;
+        clip-path: polygon(0% 30%, 100% 0, 100% 70%, 0% 100%);
+        &__item {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 2.5%;
+          &.__rev {
+            flex-flow: row-reverse;
+          }
+          &__img {
+            width: 21%;
+            object-fit: 1 / 1;
+            margin-top: 5%;
+            &.__rev {
+              transform: translateY(-35%);
+            }
+            & img {
+              width: 100%;
+              display: block;
+              object-fit: cover;
+            }
+          }
+          &__con {
+            width: 75%;
+            &.__rev {
+              margin-top: 5%;
+            }
+            &__ttl {
+              & h3 {
+                @include g.font-en-b;
+                @include g.font-14-24__15;
+                font-weight: 500;
+                & span {
+                  margin-left: 5%;
+                }
+              }
+            }
+            &__icon {
+              display: flex;
+              align-items: center;
+              gap: 2%;
+              margin: 3.5% 0;
+              &__link {
+                & img {
+                  width: 20px;
+                  height: 20px;
+                }
+                & a {
+                  @include g.font-16-15;
+                  font-weight: 500;
+                  text-decoration: underline;
+                  vertical-align: text-top;
+                }
+              }
+            }
+            &__txt {
+              margin: 3.5% 0;
+              & p {
+                @include g.font-en-b;
+                @include g.font-10-16__15;
+                line-height: 1.6;
+                font-weight: 500;
+                word-break: keep-all;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.info {
+  margin-bottom: 5%;
+  &-wrap {
+    &__ttl {
+      & h2 {
+        @include g.font-24-48__15;
+      }
+    }
+    &__body {
+      &__list {
+        margin: 10% 0;
+        &__item {
+          display: flex;
+          align-items: center;
+          margin: 3% 0;
+          &__left {
+            width: 35%;
+            & p {
+              @include g.font-10-24__15;
+            }
+          }
+          &__right {
+            & p {
+              @include g.font-10-24__15;
+              line-height: 1.67;
+              &:nth-of-type(1) {
+                @include g.font-en-b;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__map {
+      & iframe {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

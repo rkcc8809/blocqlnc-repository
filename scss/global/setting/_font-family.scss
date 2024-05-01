@@ -1,0 +1,71 @@
+$font-jp: "Noto Sans JP", sans-serif;
+
+$font-en: "Lato", sans-serif;
+
+$font-15: 15px;
+
+$font-16: 1rem;  //16px
+
+$font-17: 17px;
+
+$font-18: 18px;
+
+$font-20: 1.25rem;  //20px
+
+$font-24: 1.5rem;  //24px
+
+$font-30: 1.875rem;  //30px
+
+$font-32: 2rem;  //32px
+
+$font-36: 2.25rem;  //36px
+
+$font-48: 3rem;  //48px
+
+$font-56: 3.5rem; //56px
+
+$font-96: 6rem;  //96px
+
+$font-10-15: clamp(0.625rem, 0.54rem + 0.38vw, 0.938rem);
+
+$font-10-16: clamp(0.625rem, 0.523rem + 0.45vw, 1rem);
+
+$font-10-20: clamp(0.625rem, 0.455rem + 0.76vw, 1.25rem);
+
+$font-10-24: clamp(0.625rem, 0.386rem + 1.06vw, 1.5rem);
+
+$font-12-16: clamp(0.75rem, 0.682rem + 0.3vw, 1rem);
+
+$font-12-20: clamp(0.75rem, 0.614rem + 0.61vw, 1.25rem);
+
+$font-12-24: clamp(0.75rem, 0.545rem + 0.91vw, 1.5rem);
+
+$font-14-15: clamp(0.875rem, 0.858rem + 0.08vw, 0.938rem);
+
+$font-14-36: clamp(0.875rem, 0.5rem + 1.67vw, 2.25rem);
+
+$font-10-18: clamp(0.625rem, 0.489rem + 0.61vw, 1.125rem);
+
+$font-14-24: clamp(0.625rem, 0.386rem + 1.06vw, 1.5rem);
+
+$font-14-32: clamp(0.875rem, 0.568rem + 1.36vw, 2rem);
+
+$font-16-24: clamp(1rem, 0.864rem + 0.61vw, 1.5rem);
+
+$font-16-32: clamp(1rem, 0.727rem + 1.21vw, 2rem);
+
+$font-16-36: clamp(1rem, 0.659rem + 1.52vw, 2.25rem);
+
+$font-18-32: clamp(1.125rem, 0.886rem + 1.06vw, 2rem);
+
+$font-20-32: clamp(1.25rem, 1.045rem + 0.91vw, 2rem);
+
+$font-20-48: clamp(1.25rem, 0.773rem + 2.12vw, 3rem);
+
+$font-20-56: clamp(1.25rem, 0.636rem + 2.73vw, 3.5rem);
+
+$font-24-48: clamp(1.5rem, 1.091rem + 1.82vw, 3rem);
+
+$font-16-32: clamp(1rem, 0.727rem + 1.21vw, 2rem);
+
+$font-36-96: clamp(2.25rem, 1.227rem + 4.55vw, 6rem);
