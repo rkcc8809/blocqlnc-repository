@@ -15,8 +15,6 @@ body {
 a {
   text-decoration: none;
   color: #fff;
-  -webkit-transition: all 0.7s;
-  -o-transition: all 0.7s;
   transition: all 0.7s;
 }
 
@@ -37,40 +35,41 @@ li {
 }
 
 .breadcrumb-wrap__nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  align-items: center;
 }
 .breadcrumb-wrap__nav__list__item {
   margin-right: 10px;
   vertical-align: middle;
 }
 .breadcrumb-wrap__nav__list__item a {
+  vertical-align: bottom;
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-size: clamp(0.75rem, 0.545rem + 0.91vw, 1.5rem);
-  letter-spacing: clamp(-0.011rem, -0.008rem - 0.01vw, -0.022rem);
+  font-size: clamp(0.75rem, 0.682rem + 0.3vw, 1rem);
+  letter-spacing: clamp(-0.011rem, -0.01rem + 0vw, -0.015rem);
 }
 .breadcrumb-wrap__nav__list__item p {
+  vertical-align: middle;
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-size: clamp(0.75rem, 0.545rem + 0.91vw, 1.5rem);
-  letter-spacing: clamp(-0.011rem, -0.008rem - 0.01vw, -0.022rem);
+  font-size: clamp(0.75rem, 0.682rem + 0.3vw, 1rem);
+  letter-spacing: clamp(-0.011rem, -0.01rem + 0vw, -0.015rem);
 }
 
 .fea-wrap__ttl {
   position: relative;
 }
 .fea-wrap__ttl h2 {
-  font-size: clamp(1rem, 0.727rem + 1.21vw, 2rem);
-  letter-spacing: clamp(-0.015rem, -0.011rem - 0.02vw, -0.03rem);
-  margin-left: 80px;
+  font-size: clamp(1rem, 0.864rem + 0.61vw, 1.5rem);
+  letter-spacing: clamp(-0.015rem, -0.013rem - 0.01vw, -0.022rem);
+  margin-left: 7.5%;
 }
 .fea-wrap__ttl::before {
   position: absolute;
   content: "";
-  width: 50px;
-  height: 5px;
+  width: 5%;
+  height: 4px;
   top: 50%;
   background-color: #fff;
 }

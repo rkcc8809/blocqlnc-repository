@@ -40,7 +40,7 @@
         position: relative;
         width: 100%;
         height: 100%;
-        margin: 5% 0;
+        margin: 7.5% 0;
         &.__first::before {
           content: "blockchain";
           position: absolute;
@@ -49,7 +49,7 @@
           top: 4%;
           left: 0;
           z-index: -10;
-          font-size: clamp(4rem, -0.023rem + 17.88vw, 18.75rem);
+          font-size: clamp(3rem, -0.784rem + 16.82vw, 16.875rem);
           background: linear-gradient(
             to bottom right,
             g.$cBrand-color-2-clear,
@@ -65,11 +65,11 @@
           content: "quantum\A computer";
           position: absolute;
           width: 100%;
-          bottom: -8%;
+          bottom: -6%;
           right: 1%;
           z-index: -10;
           text-align: right;
-          font-size: clamp(4rem, -0.023rem + 17.88vw, 18.75rem);
+          font-size: clamp(3rem, -0.784rem + 16.82vw, 16.875rem);
           background: linear-gradient(
             to bottom right,
             g.$cBrand-color-2-clear,
@@ -85,14 +85,14 @@
         &__ttl {
           position: relative;
           & h2 {
-            @include g.font-16-32__15;
-            margin-left: 80px;
+            @include g.font-16-24__15;
+            margin-left: 7.5%;
           }
           &::before {
             position: absolute;
             content: "";
-            width: 50px;
-            height: 5px;
+            width: 5%;
+            height: 4px;
             top: 50%;
             background-color: g.$cWhite;
           }
@@ -100,13 +100,13 @@
         &__head {
           margin: 4% 0;
           & h3 {
-            @include g.font-20-32__15;
+            @include g.font-20-28__15;
           }
         }
         &__txt {
           margin: 4% 0;
           & p {
-            @include g.font-10-24__15;
+            @include g.font-10-20__15;
             font-weight: 500;
             line-height: 2;
           }
@@ -127,12 +127,12 @@
         &__head2 {
           margin: 4% 0;
           & h3 {
-            @include g.font-20-32__15;
+            @include g.font-20-28__15;
           }
         }
         &__txt2 {
           & p {
-            @include g.font-10-24__15;
+            @include g.font-10-20__15;
             font-weight: 500;
             line-height: 2;
           }

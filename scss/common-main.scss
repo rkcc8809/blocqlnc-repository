@@ -8,7 +8,7 @@
 
 .initial-text {
   @include g.font-en-b;
-  @include g.font-36-96__0;
+  @include g.font-36-72__0;
   color: g.$cBrand-color;
 }
 
@@ -19,7 +19,7 @@
 
 .s-ttl__sub {
   @include g.font-jp-b;
-  @include g.font-14-36__15;
+  @include g.font-14-28__15;
   display: block;
   color: g.$cWhite;
 }
@@ -71,9 +71,12 @@
   margin-top: 10%;
 }
 
+.__section5 {
+  margin-bottom: 7.5%;
+}
+
 .outer-btn-s {
-  width: 300px;
-  height: 85px;
+  width: 40%;
   background: linear-gradient(
     to bottom right,
     g.$cBrand-color-2,
@@ -84,8 +87,8 @@
 }
 
 .inner-btn-s {
-  width: 300px;
-  height: 85px;
+  width: 100%;
+  line-height: 2.5;
   background: g.$background-main;
   border-radius: 50px;
   text-align: center;
@@ -94,7 +97,7 @@
 .__arrow {
   height: 100%;
   @include g.flex(center);
-  @include g.font-32-15;
+  @include g.font-16-24__15;
   background-image: linear-gradient(
     to bottom right,
     g.$cBrand-color-2,
@@ -103,7 +106,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  gap: 60px;
+  gap: 30px;
   position: relative;
 
   &:hover {
@@ -146,7 +149,7 @@
 }
 
 .__text {
-  margin-top: -5px;
+  margin-top: -2.5px;
 }
 
 .__icon-arrow svg {
@@ -165,16 +168,16 @@
 
 .arrow-part1 {
   display: block;
-  width: 24px; /* 横線部分の幅 */
-  height: 4px; /* 横線部分の高さ */
+  width: 16px; /* 横線部分の幅 */
+  height: 2px; /* 横線部分の高さ */
   background-color: g.$cBrand-color;
 }
 
 .diagonal-line1,
 .diagonal-line2 {
   display: block;
-  width: 12px; /* 斜め線の長さ */
-  height: 4px; /* 斜め線の太さ */
+  width: 8px; /* 斜め線の長さ */
+  height: 2px; /* 斜め線の太さ */
   background-color: g.$cBrand-color; /* 斜め線の色 */
   position: absolute;
   right: 0;
@@ -183,12 +186,12 @@
 
 .diagonal-line1 {
   transform: rotate(45deg); /* 斜め線の角度調整 */
-  top: -4.8px; /* 上からの位置 */
+  top: -3px; /* 上からの位置 */
 }
 
 .diagonal-line2 {
   transform: rotate(-45deg); /* 斜め線の角度調整 */
-  top: 4.8px; /* 上からの位置 */
+  top: 3px; /* 上からの位置 */
 }
 
 // ここまで
@@ -199,69 +202,62 @@
 }
 
 .w-btn {
-  width: 8.75rem;
+  width: 37.5%;
   & a {
     display: block;
     background-color: g.$cWhite;
     color: g.$background-main;
     text-align: center;
     cursor: pointer;
-    @include g.font-16-15;
+    @include g.font-10-16__15;
     line-height: 2.5;
     & span {
       margin: 0 2.5%;
       display: inline-block;
-      vertical-align: middle;
-    }
-    & span:nth-of-type(1) {
-      margin-top: -5px;
     }
     & .__icon-arrow {
-      margin-top: -7px;
       & svg {
-        font-size: 0.625rem;
+        @include g.font-5-10__0;
       }
     }
   }
 }
 
 .w-btn2 {
-  width: 401px;
+  width: 25vw;
   & a {
     display: block;
     background-color: g.$cWhite;
     color: g.$background-main;
     text-align: center;
     cursor: pointer;
-    @include g.font-30-15;
-    line-height: 3.15;
+    @include g.font-14-24__15;
+    line-height: 3.5;
     & span {
       margin: 0 2.5%;
       display: inline-block;
-      vertical-align: middle;
     }
-    & span:nth-of-type(2) {
-      margin-top: -12px;
-    }
+
     & .__icon-arrow__rev {
-      margin-top: -20px;
+      width: 5%;
+      vertical-align: middle;
       & svg {
-        font-size: 15px;
+        width: 100%;
       }
     }
   }
 }
 
 .b-btn {
-  width: 401px;
+  width: 25vw;
   & a {
     display: block;
     background-color: g.$cBlack;
     color: g.$cWhite;
     text-align: center;
     cursor: pointer;
-    @include g.font-30-15;
-    line-height: 3.15;
+    @include g.font-14-24__15;
+    line-height: 3.5;
   }
 }
 
@@ -295,7 +291,11 @@
 
     &__nav {
       width: 45%;
-      padding-right: 3%;
+      padding-right: 5%;
+      @include g.mq(pc) {
+        width: 65%;
+        padding-right: 2.5%;
+      }
 
       &__list {
         @include g.flex;
@@ -315,10 +315,13 @@
               background-color: g.$cBrand-color;
               padding: 7.5% 30%;
               @include g.font-17-15;
+              @include g.mq(pc) {
+                padding: 7.5% 20%;
+              }
               &:hover {
+                opacity: 1;
                 background-color: g.$cWhite;
                 color: g.$cBrand-color;
-                opacity: 1;
               }
             }
           }
@@ -337,7 +340,7 @@
     position: relative;
     z-index: 0;
     width: 100%;
-    height: 524px;
+    height: 50vh;
     &::after {
       content: "";
       background-color: rgba(17, 8, 0, 0.9);
@@ -366,7 +369,7 @@
         line-height: 1.7;
         width: 100%;
         margin-top: 50px;
-        @include g.font-10-24__15;
+        @include g.font-10-16__15;
         font-weight: 500;
       }
     }
@@ -395,8 +398,8 @@
     padding: 4% 0 2%;
     &__btn {
       &__circle {
-        width: 100px;
-        height: 100px;
+        width: 6%;
+        aspect-ratio: 1 / 1;
         border-radius: 50%;
         background-color: g.$cBrand-color;
         margin-left: auto;
@@ -409,8 +412,8 @@
           align-items: center;
           cursor: pointer;
           & svg {
-            width: 35px;
-            height: 35px;
+            width: 40%;
+            height: auto;
           }
         }
       }
@@ -433,9 +436,9 @@
         }
       }
       &__right {
+        width: 40%;
         &__btn {
-          width: 300px;
-          height: 90px;
+          width: 55%;
           & a {
             display: flex;
             align-items: center;
@@ -444,9 +447,9 @@
             background-color: g.$cBrand-color;
             border-radius: 6px;
             width: 100%;
-            height: 100%;
+            line-height: 3;
             @include g.font-en-b;
-            @include g.font-30-15;
+            @include g.font-16-24__15;
             &:hover {
               background-color: g.$cWhite;
               color: g.$cBrand-color;
@@ -473,11 +476,12 @@
           & p {
             @include g.font-10-15__15;
             line-height: 4;
+            font-weight: 500;
           }
         }
       }
       &__nav {
-        width: 40%;
+        width: 48.5%;
         &__list {
           display: flex;
           justify-content: space-between;

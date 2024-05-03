@@ -60,14 +60,15 @@
 
           &__ttl {
             & h2 {
-              @include g.font-20-48-5;
+              @include g.font-20-32__15;
               color: g.$cBrand-color;
             }
           }
 
           &__txt {
             & p {
-              @include g.font-10-18__15;
+              @include g.font-10-15__15;
+              line-height: 1.7;
               &:nth-of-type(2) {
                 margin-top: 3%;
               }
@@ -126,6 +127,7 @@
           }
           &__text {
             @include g.font-10-16__15;
+            line-height: 1.6;
             margin-top: 5%;
             width: 70%;
           }
@@ -165,6 +167,9 @@
       &__list {
         width: 70%;
         margin: 0 auto;
+        & hr {
+          margin: 0.5em 0;
+        }
         &__item {
           &__link {
             width: 100%;

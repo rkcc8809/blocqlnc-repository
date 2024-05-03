@@ -80,6 +80,16 @@
   font-size: clamp(0.375rem, 0.136rem + 1.06vw, 1.25rem);
 }
 
+@mixin font-5-10__0 {
+  font-size: $font-5-10;
+  letter-spacing: 0;
+}
+
+@mixin font-10-14__15 {
+  font-size: $font-10-14;
+  letter-spacing: clamp(-0.009rem, -0.008rem + 0vw, -0.013rem);
+}
+
 @mixin font-10-15__15 {
   font-size: $font-10-15;
   letter-spacing: clamp(-0.009rem, -0.008rem + -0.01vw, -0.014rem);
@@ -110,9 +120,19 @@
   letter-spacing: clamp(-0.011rem, -0.01rem + 0vw, -0.015rem);
 }
 
+@mixin font-12-18__15 {
+  font-size: $font-12-18;
+  letter-spacing: clamp(-0.011rem, -0.01rem + -0.01vw, -0.017rem);
+}
+
 @mixin font-12-20__0 {
   font-size: $font-12-20;
   letter-spacing: 0;
+}
+
+@mixin font-12-20__15 {
+  font-size: $font-12-20;
+  letter-spacing: clamp(-0.011rem, -0.009rem + -0.01vw, -0.019rem);
 }
 
 @mixin font-12-24__15 {
@@ -125,6 +145,11 @@
   letter-spacing: clamp(-0.013rem, -0.013rem + 0vw, -0.014rem);
 }
 
+@mixin font-14-20__15 {
+  font-size: $font-14-20;
+  letter-spacing: clamp(-0.013rem, -0.012rem + -0.01vw, -0.019rem);
+}
+
 @mixin font-14-24__0 {
   font-size: $font-14-24;
   letter-spacing: 0;
@@ -133,6 +158,11 @@
 @mixin font-14-24__15 {
   font-size: $font-14-24;
   letter-spacing: clamp(-0.013rem, -0.011rem + -0.01vw, -0.022rem);
+}
+
+@mixin font-14-28__15 {
+  font-size: $font-14-28;
+  letter-spacing: clamp(-0.001rem, 0.006rem + -0.03vw, -0.026rem);
 }
 
 @mixin font-14-32__15 {
@@ -150,6 +180,11 @@
   letter-spacing: clamp(-0.015rem, -0.013rem + -0.01vw, -0.022rem);
 }
 
+@mixin font-16-28__15 {
+  font-size: $font-16-28;
+  letter-spacing: clamp(-0.015rem, -0.012rem + -0.01vw, -0.026rem);
+}
+
 @mixin font-16-32__15 {
   font-size: $font-16-32;
   letter-spacing: clamp(-0.015rem, -0.011rem + -0.02vw, -0.03rem);
@@ -160,14 +195,34 @@
   letter-spacing: clamp(-0.015rem, -0.01rem + -0.02vw, -0.034rem);
 }
 
+@mixin font-18-28__15 {
+  font-size: $font-18-28;
+  letter-spacing: clamp(-0.017rem, -0.014rem + -0.01vw, -0.026rem);
+}
+
 @mixin font-18-32__15 {
   font-size: $font-18-32;
   letter-spacing: clamp(-0.017rem, -0.013rem + -0.02vw, -0.03rem);
 }
 
+@mixin font-20-28__15 {
+  font-size: $font-20-28;
+  letter-spacing: clamp(-0.019rem, -0.017rem + -0.01vw, -0.026rem);
+}
+
 @mixin font-20-32__15 {
   font-size: $font-20-32;
   letter-spacing: clamp(-0.019rem, -0.016rem + -0.01vw, -0.03rem);
+}
+
+@mixin font-20-36__15 {
+  font-size: $font-20-36;
+  letter-spacing: clamp(-0.019rem, -0.015rem + -0.02vw, -0.034rem);
+}
+
+@mixin font-20-36__5 {
+  font-size: $font-20-36;
+  letter-spacing: clamp(0.063rem, 0.049rem + 0.06vw, 0.113rem);
 }
 
 @mixin font-20-48__15 {
@@ -208,6 +263,26 @@
 @mixin font-20-56__15 {
   font-size: $font-20-56;
   letter-spacing: clamp(-0.019rem, -0.01rem + -0.04vw, -0.052rem);
+}
+
+@mixin font-32-72__0 {
+  font-size: $font-32-72;
+  letter-spacing: 0;
+}
+
+@mixin font-36-72__0 {
+  font-size: $font-36-72;
+  letter-spacing: 0;
+}
+
+@mixin font-36-80__0 {
+  font-size: $font-36-80;
+  letter-spacing: 0;
+}
+
+@mixin font-36-80__15 {
+  font-size: $font-36-80;
+  letter-spacing: clamp(-0.034rem, -0.023rem + -0.05vw, -0.075rem);
 }
 
 @mixin font-36-96__0 {

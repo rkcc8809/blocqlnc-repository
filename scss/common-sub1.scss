@@ -16,17 +16,20 @@
     &__nav {
       &__list {
         display: flex;
+        align-items: center;
         &__item {
           margin-right: 10px;
 
           vertical-align: middle;
           & a {
+            vertical-align: bottom;
             @include g.font-en-b;
-            @include g.font-12-24__15;
+            @include g.font-12-16__15;
           }
           & p {
+            vertical-align: middle;
             @include g.font-en-b;
-            @include g.font-12-24__15;
+            @include g.font-12-16__15;
           }
         }
       }
@@ -40,14 +43,14 @@
     &__ttl {
       position: relative;
       & h2 {
-        @include g.font-16-32__15;
-        margin-left: 80px;
+        @include g.font-16-24__15;
+        margin-left: 7.5%;
       }
       &::before {
         position: absolute;
         content: "";
-        width: 50px;
-        height: 5px;
+        width: 5%;
+        height: 4px;
         top: 50%;
         background-color: g.$cWhite;
       }

@@ -15,8 +15,6 @@ body {
 a {
   text-decoration: none;
   color: #fff;
-  -webkit-transition: all 0.7s;
-  -o-transition: all 0.7s;
   transition: all 0.7s;
 }
 
@@ -54,9 +52,7 @@ a {
   position: absolute;
   top: 50%;
   left: 7.5%;
-  -webkit-transform: translateY(-25%);
-      -ms-transform: translateY(-25%);
-          transform: translateY(-25%);
+  transform: translateY(-25%);
 }
 .top-wrap__ttl h1 {
   font-family: "Lato", sans-serif;
@@ -70,38 +66,32 @@ a {
 }
 
 .contact-wrap__para p {
-  font-size: clamp(0.75rem, 0.545rem + 0.91vw, 1.5rem);
-  letter-spacing: clamp(-0.011rem, -0.008rem - 0.01vw, -0.022rem);
+  font-size: clamp(0.75rem, 0.682rem + 0.3vw, 1rem);
+  letter-spacing: clamp(-0.011rem, -0.01rem + 0vw, -0.015rem);
   font-weight: 500;
   line-height: 1.5;
 }
 .contact-wrap__body__form__block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 5% 0;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4.5% 0;
 }
 .contact-wrap__body__form__block__left {
-  width: 35%;
+  width: 25%;
 }
 .contact-wrap__body__form__block__left p {
-  font-size: clamp(1rem, 0.864rem + 0.61vw, 1.5rem);
-  letter-spacing: clamp(-0.015rem, -0.013rem - 0.01vw, -0.022rem);
+  font-size: clamp(0.75rem, 0.648rem + 0.45vw, 1.125rem);
+  letter-spacing: clamp(-0.011rem, -0.01rem - 0.01vw, -0.017rem);
   display: inline-block;
 }
 .contact-wrap__body__form__block__left span {
-  font-size: clamp(1rem, 0.864rem + 0.61vw, 1.5rem);
-  letter-spacing: clamp(-0.015rem, -0.013rem - 0.01vw, -0.022rem);
+  font-size: clamp(0.75rem, 0.648rem + 0.45vw, 1.125rem);
+  letter-spacing: clamp(-0.011rem, -0.01rem - 0.01vw, -0.017rem);
   margin-left: 5%;
 }
 .contact-wrap__body__form__block__right {
-  width: 60%;
+  width: 70%;
 }
 .contact-wrap__body__form__block__right input {
   width: 100%;
@@ -110,35 +100,32 @@ a {
   padding-right: 3.5%;
 }
 .contact-wrap__body__form__block__right input[type=text] {
-  font-size: clamp(0.625rem, 0.386rem + 1.06vw, 1.5rem);
-  letter-spacing: clamp(-0.013rem, -0.011rem - 0.01vw, -0.022rem);
+  font-size: clamp(0.75rem, 0.648rem + 0.45vw, 1.125rem);
+  letter-spacing: clamp(-0.011rem, -0.01rem - 0.01vw, -0.017rem);
   font-weight: 500;
 }
 .contact-wrap__body__form__block__right input[type=url] {
-  font-size: clamp(0.625rem, 0.386rem + 1.06vw, 1.5rem);
-  letter-spacing: clamp(-0.013rem, -0.011rem - 0.01vw, -0.022rem);
+  font-size: clamp(0.75rem, 0.648rem + 0.45vw, 1.125rem);
+  letter-spacing: clamp(-0.011rem, -0.01rem - 0.01vw, -0.017rem);
   font-weight: 500;
 }
 .contact-wrap__body__form__block__right input[type=email] {
-  font-size: clamp(0.625rem, 0.386rem + 1.06vw, 1.5rem);
-  letter-spacing: clamp(-0.013rem, -0.011rem - 0.01vw, -0.022rem);
+  font-size: clamp(0.75rem, 0.648rem + 0.45vw, 1.125rem);
+  letter-spacing: clamp(-0.011rem, -0.01rem - 0.01vw, -0.017rem);
   font-weight: 500;
 }
 .contact-wrap__body__form__block__right input[type=tel] {
-  font-size: clamp(0.625rem, 0.386rem + 1.06vw, 1.5rem);
-  letter-spacing: clamp(-0.013rem, -0.011rem - 0.01vw, -0.022rem);
+  font-size: clamp(0.75rem, 0.648rem + 0.45vw, 1.125rem);
+  letter-spacing: clamp(-0.011rem, -0.01rem - 0.01vw, -0.017rem);
   font-weight: 500;
 }
 .contact-wrap__body__form__block__second__label p {
-  font-size: clamp(1rem, 0.864rem + 0.61vw, 1.5rem);
-  letter-spacing: clamp(-0.015rem, -0.013rem - 0.01vw, -0.022rem);
+  font-size: clamp(0.75rem, 0.648rem + 0.45vw, 1.125rem);
+  letter-spacing: clamp(-0.011rem, -0.01rem - 0.01vw, -0.017rem);
 }
 .contact-wrap__body__form__block__second__input {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .contact-wrap__body__form__block__second__input__one {
   font-weight: 500;
@@ -146,19 +133,20 @@ a {
   margin-top: 5%;
 }
 .contact-wrap__body__form__block__second__input__one input {
-  width: 40px;
-  height: 40px;
+  width: 2em;
+  height: 2em;
   margin-right: 2.5%;
   accent-color: #110800;
 }
 .contact-wrap__body__form__block__second__input__one label {
   font-weight: 500;
-  font-size: clamp(0.75rem, 0.545rem + 0.91vw, 1.5rem);
-  letter-spacing: clamp(-0.011rem, -0.008rem - 0.01vw, -0.022rem);
+  font-size: clamp(0.75rem, 0.648rem + 0.45vw, 1.125rem);
+  letter-spacing: clamp(-0.011rem, -0.01rem - 0.01vw, -0.017rem);
+  vertical-align: middle;
 }
 .contact-wrap__body__form__block__third__label p {
-  font-size: clamp(1rem, 0.864rem + 0.61vw, 1.5rem);
-  letter-spacing: clamp(-0.015rem, -0.013rem - 0.01vw, -0.022rem);
+  font-size: clamp(0.75rem, 0.648rem + 0.45vw, 1.125rem);
+  letter-spacing: clamp(-0.011rem, -0.01rem - 0.01vw, -0.017rem);
   margin-top: 5%;
   margin-left: -2.5%;
 }
@@ -168,21 +156,19 @@ a {
   margin-left: -2.5%;
   margin-right: -2.5%;
   margin-top: 5%;
-  font-size: clamp(0.625rem, 0.386rem + 1.06vw, 1.5rem);
-  letter-spacing: clamp(-0.013rem, -0.011rem - 0.01vw, -0.022rem);
+  font-size: clamp(0.75rem, 0.648rem + 0.45vw, 1.125rem);
+  letter-spacing: clamp(-0.011rem, -0.01rem - 0.01vw, -0.017rem);
   line-height: 1.6;
   padding: 1.5% 2.5%;
 }
 .contact-wrap__body__form__block__fourth__policy p {
-  font-size: clamp(0.625rem, 0.523rem + 0.45vw, 1rem);
-  letter-spacing: clamp(-0.009rem, -0.008rem - 0.01vw, -0.015rem);
+  font-size: clamp(0.625rem, 0.557rem + 0.3vw, 0.875rem);
+  letter-spacing: clamp(-0.009rem, -0.008rem + 0vw, -0.013rem);
   margin-top: 2.5%;
   margin-left: -2.5%;
 }
 .contact-wrap__body__form__block__fourth__policy p a {
   text-decoration: underline;
-  -webkit-transition: all 0.1s;
-  -o-transition: all 0.1s;
   transition: all 0.1s;
 }
 .contact-wrap__body__form__block__fourth__policy p a:hover {
@@ -194,11 +180,11 @@ a {
 .contact-wrap__body__form__block__fourth__check {
   margin-top: 2.5%;
   margin-left: -2.5%;
-  font-size: clamp(1rem, 0.864rem + 0.61vw, 1.5rem);
-  letter-spacing: clamp(-0.015rem, -0.013rem - 0.01vw, -0.022rem);
+  font-size: clamp(0.75rem, 0.614rem + 0.61vw, 1.25rem);
+  letter-spacing: clamp(-0.011rem, -0.009rem - 0.01vw, -0.019rem);
 }
 .contact-wrap__body__form__btn {
-  width: 294px;
+  width: 30%;
   margin: 2.5% auto 0;
 }
 
@@ -209,22 +195,19 @@ a {
   background-color: #110800;
   cursor: pointer;
   border: unset;
-  -webkit-transition: all 0.7s;
-  -o-transition: all 0.7s;
   transition: all 0.7s;
   line-height: 3;
 }
 .contact-btn span:nth-of-type(1) {
-  font-size: 1.875rem;
-  letter-spacing: -0.45px;
+  font-size: clamp(0.625rem, 0.386rem + 1.06vw, 1.5rem);
+  letter-spacing: clamp(-0.013rem, -0.011rem - 0.01vw, -0.022rem);
 }
 .contact-btn .__icon-arrow {
   margin-left: 5%;
-  vertical-align: super;
+  vertical-align: middle;
 }
 .contact-btn .__icon-arrow svg {
-  width: 15px;
-  height: 15px;
+  width: 10%;
 }
 .contact-btn:hover {
   opacity: 0.7;
@@ -246,8 +229,8 @@ label[for=check]::before {
   position: absolute;
   left: 0;
   top: 0;
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   border: 2px solid #333;
   background-color: #fff;
 }
@@ -255,15 +238,13 @@ label[for=check]::before {
 label[for=check]::after {
   content: "";
   position: absolute;
-  top: 12px;
-  left: 7.5px;
-  width: 25px;
-  height: 7.5px;
-  border-left: 4px solid #333;
-  border-bottom: 4px solid #333;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  top: 8.5px;
+  left: 3.5px;
+  width: 17.5px;
+  height: 6px;
+  border-left: 3px solid #333;
+  border-bottom: 3px solid #333;
+  transform: rotate(-45deg);
   opacity: 0;
 }
 
@@ -272,7 +253,7 @@ label[for=check]::after {
 }
 
 .label-check {
-  margin-left: 30px;
+  margin-left: 15px;
   margin-top: 3.5%;
   display: inline-block;
   width: 150px;

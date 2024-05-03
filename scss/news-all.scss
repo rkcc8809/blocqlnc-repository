@@ -73,7 +73,7 @@ a {
           justify-content: space-around;
           &__ttl {
             & h3 {
-              @include g.font-18-32__15;
+              @include g.font-18-28__15;
             }
           }
           &__para {
@@ -85,7 +85,7 @@ a {
           }
           &__date {
             & p {
-              @include g.font-14-24__15;
+              @include g.font-14-20__15;
               @include g.font-en-b;
               font-weight: 500;
             }
@@ -98,13 +98,15 @@ a {
       &__list {
         display: flex;
         justify-content: center;
-        gap: 5%;
+        width: 100%;
         &__item {
+          width: 9%;
+          text-align: center;
           &__link {
             color: g.$cBrand-color;
             @include g.font-en-b;
-            @include g.font-14-32__15;
-            padding: 24px 34px;
+            @include g.font-14-24__15;
+            padding: 20% 28%;
             &.__now {
               color: g.$cWhite;
               background-color: g.$cBrand-color;
@@ -113,8 +115,9 @@ a {
             }
             &.__next {
               color: g.$cBrand-color;
-              @include g.font-14-32__15;
+              @include g.font-14-24__15;
               @include g.font-jp-b;
+              white-space: nowrap;
             }
           }
         }

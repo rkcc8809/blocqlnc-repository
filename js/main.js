@@ -11,6 +11,7 @@ $(document).ready(function() {
 
 
 
+
 $(document).ready(function() {
     $('.__arrow').on('mouseenter', function () {
         const $thisArrow = $(this);
@@ -22,7 +23,7 @@ $(document).ready(function() {
         $diagonalLines.css({
             transform: 'rotate(0deg) translateX(0)',
             top: '0',
-            width: '24px'
+            width: '16px'
         });
 
         // 各アニメーションの終了を検出

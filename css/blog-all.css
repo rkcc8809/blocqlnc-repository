@@ -15,8 +15,6 @@ body {
 a {
   text-decoration: none;
   color: #fff;
-  -webkit-transition: all 0.7s;
-  -o-transition: all 0.7s;
   transition: all 0.7s;
 }
 
@@ -54,9 +52,7 @@ a {
   position: absolute;
   top: 50%;
   left: 7.5%;
-  -webkit-transform: translateY(-25%);
-      -ms-transform: translateY(-25%);
-          transform: translateY(-25%);
+  transform: translateY(-25%);
 }
 .top-wrap__ttl h1 {
   font-family: "Lato", sans-serif;
@@ -72,17 +68,13 @@ a {
   margin: 2.5% 0;
 }
 .article-wrap__block__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   color: #110800;
 }
 .article-wrap__block__link__txt__ttl h3 {
-  font-size: clamp(1rem, 0.727rem + 1.21vw, 2rem);
-  letter-spacing: clamp(-0.015rem, -0.011rem - 0.02vw, -0.03rem);
+  font-size: clamp(1rem, 0.795rem + 0.91vw, 1.75rem);
+  letter-spacing: clamp(-0.015rem, -0.012rem - 0.01vw, -0.026rem);
   line-height: 2;
 }
 .article-wrap__block__link__txt__para p {
@@ -101,21 +93,20 @@ a {
   margin-top: 7.5%;
 }
 .article-wrap__btn__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 5%;
+  justify-content: center;
+}
+.article-wrap__btn__list__item {
+  width: 9%;
+  text-align: center;
 }
 .article-wrap__btn__list__item__link {
   color: #fe4d02;
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-size: clamp(0.875rem, 0.568rem + 1.36vw, 2rem);
-  letter-spacing: clamp(-0.013rem, -0.009rem - 0.02vw, -0.03rem);
-  padding: 24px 34px;
+  font-size: clamp(0.625rem, 0.386rem + 1.06vw, 1.5rem);
+  letter-spacing: clamp(-0.013rem, -0.011rem - 0.01vw, -0.022rem);
+  padding: 20% 28%;
 }
 .article-wrap__btn__list__item__link.__now {
   color: #fff;
@@ -125,10 +116,11 @@ a {
 }
 .article-wrap__btn__list__item__link.__next {
   color: #fe4d02;
-  font-size: clamp(0.875rem, 0.568rem + 1.36vw, 2rem);
-  letter-spacing: clamp(-0.013rem, -0.009rem - 0.02vw, -0.03rem);
+  font-size: clamp(0.625rem, 0.386rem + 1.06vw, 1.5rem);
+  letter-spacing: clamp(-0.013rem, -0.011rem - 0.01vw, -0.022rem);
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .footer h2, .footer a, .footer small {

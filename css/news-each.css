@@ -15,8 +15,6 @@ body {
 a {
   text-decoration: none;
   color: #fff;
-  -webkit-transition: all 0.7s;
-  -o-transition: all 0.7s;
   transition: all 0.7s;
 }
 
@@ -54,9 +52,7 @@ a {
   position: absolute;
   top: 50%;
   left: 7.5%;
-  -webkit-transform: translateY(-25%);
-      -ms-transform: translateY(-25%);
-          transform: translateY(-25%);
+  transform: translateY(-25%);
 }
 .top-wrap__ttl h1 {
   font-family: "Lato", sans-serif;
@@ -108,14 +104,11 @@ a {
   vertical-align: middle;
 }
 .content-wrap .b-btn a .__icon-arrow__rev {
-  margin-top: -20px;
+  vertical-align: sub;
+  width: 5%;
 }
 .content-wrap .b-btn a .__icon-arrow__rev svg {
-  width: 15px;
-  height: 15px;
-}
-.content-wrap .b-btn a span:nth-of-type(2) {
-  margin-top: -12px;
+  width: 100%;
 }
 
 .footer h2, .footer a, .footer small {
