@@ -14,16 +14,23 @@
     z-index: 0;
     width: 100%;
     height: 100vh;
+    @include g.mq(pc) {
+      background-position: 20%;
+    }
 
     &__ttl {
-      position: absolute;
-      bottom: 7.5%;
-      left: 7.5%;
-
       & h1 {
         @include g.font-en-b;
         @include g.font-20-56__0;
         line-height: 1.43;
+        position: absolute;
+        bottom: 15%;
+        left: 5%;
+      }
+      & .ttl__sub {
+        position: absolute;
+        left: 5%;
+        bottom: 7.5%;
       }
     }
   }
@@ -62,21 +69,61 @@
             & h2 {
               @include g.font-20-32__15;
               color: g.$cBrand-color;
+              @include g.mq(tab) {
+                @include g.font-14-23__15__tab;
+                & .initial-text {
+                  @include g.font-24-47__15__tab;
+                }
+                & .s-ttl__sub {
+                  @include g.font-9-18__15__tab;
+                }
+              }
             }
           }
 
           &__txt {
             & p {
               @include g.font-10-15__15;
+              @include g.mq(pc) {
+                @include g.font-7-12__15;
+              }
+              @include g.mq(tab) {
+                @include g.font-6-9__15__tab;
+                line-height: 1.2;
+              }
+
               line-height: 1.7;
               &:nth-of-type(2) {
                 margin-top: 3%;
               }
             }
           }
+          & .inner-btn-s {
+            @include g.mq(tab) {
+              line-height: 2.4;
+              & .__arrow {
+                @include g.font-9-15__15__tab;
+              }
+              & .__text {
+                margin-top: 0;
+              }
+            }
+          }
         }
       }
     }
+  }
+}
+
+@include g.mq(tab) {
+  .arrow-part1 {
+    width: 10px;
+    height: 2px;
+  }
+  .diagonal-line1,
+  .diagonal-line2 {
+    width: 4.5px;
+    height: 1.5px;
   }
 }
 
@@ -88,6 +135,9 @@
     &__link {
       text-align: right;
       margin: 1.5% 0;
+      @include g.mq(tab) {
+        margin: 5% 0;
+      }
       & a {
         @include g.font-10-24__15;
         & span {
@@ -109,11 +159,23 @@
     &__con {
       display: flex;
       justify-content: space-between;
+      @include g.mq(tab) {
+        display: block;
+      }
       &__block {
         width: 30%;
+        @include g.mq(tab) {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 5%;
+        }
         &__img {
           width: 100%;
           aspect-ratio: 393 / 260;
+          @include g.mq(tab) {
+            width: 37.5%;
+          }
           & img {
             width: 100%;
             height: 100%;
@@ -121,15 +183,30 @@
         }
         &__txt {
           margin: 5% 2.5%;
+          @include g.mq(tab) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0;
+            width: 60%;
+          }
           &__date {
             @include g.font-10-16__15;
             @include g.font-en-b;
+            @include g.mq(tab) {
+              @include g.font-10-14__15__tab;
+            }
           }
           &__text {
             @include g.font-10-16__15;
             line-height: 1.6;
             margin-top: 5%;
+            margin-bottom: 5%;
             width: 70%;
+            @include g.mq(tab) {
+              width: 100%;
+              @include g.font-10-14__15__tab;
+            }
           }
         }
       }
@@ -145,6 +222,9 @@
     &__link {
       text-align: right;
       margin: 1.5% 0;
+      @include g.mq(tab) {
+        margin: 3% 0;
+      }
       & a {
         @include g.font-10-24__15;
         & span {
@@ -178,9 +258,18 @@
             padding: 1% 0;
             &__left {
               width: 15%;
+              @include g.mq(tab) {
+                width: 20%;
+              }
               & p {
                 @include g.font-en-b;
                 @include g.font-14-24__0;
+                @include g.mq(pc) {
+                  @include g.font-16-17__pc;
+                }
+                @include g.mq(tab) {
+                  @include g.font-14-16__tab;
+                }
                 & span {
                   display: block;
                   @include g.font-12-20__0;

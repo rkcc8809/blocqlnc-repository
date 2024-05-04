@@ -5,6 +5,53 @@
 @use "global" as g;
 
 // common-main
+@include g.mq(pc_L) {
+  .__pc {
+    display: none;
+  }
+  .__tab {
+    display: none;
+  }
+  .__sp {
+    display: none;
+  }
+}
+
+@include g.mq(pc) {
+  .__pc {
+    display: inline-block;
+  }
+  .__tab {
+    display: none;
+  }
+  .__sp {
+    display: none;
+  }
+}
+
+@include g.mq(tab) {
+  .__pc {
+    display: none;
+  }
+  .__tab {
+    display: inline-block;
+  }
+  .__sp {
+    display: none;
+  }
+}
+
+@include g.mq(sp) {
+  .__pc {
+    display: none;
+  }
+  .__tab {
+    display: none;
+  }
+  .__sp {
+    display: inline-block;
+  }
+}
 
 .initial-text {
   @include g.font-en-b;
@@ -75,6 +122,10 @@
   margin-bottom: 7.5%;
 }
 
+.__section6 {
+  margin: 5% 0;
+}
+
 .outer-btn-s {
   width: 40%;
   background: linear-gradient(
@@ -84,6 +135,9 @@
   );
   border-radius: 50px;
   padding: 2px;
+  @include g.mq(tab) {
+    width: 40%;
+  }
 }
 
 .inner-btn-s {
@@ -97,7 +151,7 @@
 .__arrow {
   height: 100%;
   @include g.flex(center);
-  @include g.font-16-24__15;
+  @include g.font-12-24__15;
   background-image: linear-gradient(
     to bottom right,
     g.$cBrand-color-2,
@@ -106,11 +160,14 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  gap: 30px;
+  gap: 10%;
   position: relative;
 
   &:hover {
     opacity: 1;
+  }
+  @include g.mq(tab) {
+    @include g.font-11-15__15__tab;
   }
 }
 
@@ -171,6 +228,9 @@
   width: 16px; /* 横線部分の幅 */
   height: 2px; /* 横線部分の高さ */
   background-color: g.$cBrand-color;
+  @include g.mq(tab) {
+    width: 12px;
+  }
 }
 
 .diagonal-line1,
@@ -182,16 +242,25 @@
   position: absolute;
   right: 0;
   transition: all 0.2s;
+  @include g.mq(tab) {
+    width: 6px;
+  }
 }
 
 .diagonal-line1 {
   transform: rotate(45deg); /* 斜め線の角度調整 */
   top: -3px; /* 上からの位置 */
+  @include g.mq(tab) {
+    top: -2px;
+  }
 }
 
 .diagonal-line2 {
   transform: rotate(-45deg); /* 斜め線の角度調整 */
   top: 3px; /* 上からの位置 */
+  @include g.mq(tab) {
+    top: 2px;
+  }
 }
 
 // ここまで
@@ -203,6 +272,9 @@
 
 .w-btn {
   width: 37.5%;
+  @include g.mq(tab) {
+    width: 30%;
+  }
   & a {
     display: block;
     background-color: g.$cWhite;
@@ -250,6 +322,9 @@
 
 .b-btn {
   width: 25vw;
+  @include g.mq(tab) {
+    width: 32vw;
+  }
   & a {
     display: block;
     background-color: g.$cBlack;
@@ -290,6 +365,9 @@
     }
 
     &__nav {
+      @include g.mq(tab) {
+        display: none;
+      }
       width: 45%;
       padding-right: 5%;
       @include g.mq(pc) {
@@ -331,6 +409,124 @@
   }
 }
 
+.h-open {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  right: 0;
+  cursor: pointer;
+  width: 80px;
+  height: 100%;
+  text-align: center;
+
+  & span {
+    display: inline-block;
+    transition: all 0.4s;
+    position: absolute;
+    left: 24px;
+    height: 2.5px;
+    border-radius: 2px;
+    background-color: g.$cWhite;
+    width: 40%;
+
+    &:nth-of-type(1) {
+      top: 30px;
+    }
+    &:nth-of-type(2) {
+      top: 40px;
+    }
+    &:nth-of-type(3) {
+      top: 50px;
+    }
+  }
+
+  &.active span:nth-of-type(1) {
+    top: 33px;
+    left: 24px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 50%;
+  }
+  &.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  &.active span:nth-of-type(3) {
+    top: 45px;
+    left: 24px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 50%;
+  }
+  @include g.mq(tab) {
+    display: block;
+  }
+}
+
+#h-nav {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: -120%;
+  width: 50%;
+  height: 100vh;
+  background-color: g.$background-main;
+  transition: all 0.6s;
+
+  &__list__first {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    & li {
+      margin: 10% 15%;
+      width: 55%;
+      & a {
+        & img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__list__second {
+    position: absolute;
+    z-index: 999;
+    top: 25%;
+    left: 22.5%;
+    transform: translateY(-50%) translateX(-50%);
+    & li {
+      margin: 35% 0;
+      & a {
+        @include g.font-en-b;
+        display: block;
+        font-size: 14px;
+        letter-spacing: -0.21px;
+      }
+    }
+  }
+  &__list__third {
+    position: absolute;
+    z-index: 999;
+    top: 45%;
+    left: 32.5%;
+    transform: translateY(-50%) translateX(-50%);
+    & li {
+      & a {
+        @include g.font-en-b;
+        display: block;
+        font-size: 17px;
+        letter-spacing: -0.255px;
+        width: 160px;
+        text-align: center;
+        line-height: 2.75;
+        background-color: g.$cBrand-color;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+#h-nav.panelactive {
+  right: 0;
+}
+
 // our
 .our {
   &-wrap {
@@ -341,6 +537,9 @@
     z-index: 0;
     width: 100%;
     height: 50vh;
+    @include g.mq(pc) {
+      height: 30vh;
+    }
     &::after {
       content: "";
       background-color: rgba(17, 8, 0, 0.9);
@@ -371,6 +570,9 @@
         margin-top: 50px;
         @include g.font-10-16__15;
         font-weight: 500;
+        @include g.mq(tab) {
+          @include g.font-8-11__15__tab;
+        }
       }
     }
   }
@@ -396,6 +598,9 @@
 
   &-wrap {
     padding: 4% 0 2%;
+    @include g.mq(tab) {
+      padding: 8% 0 2%;
+    }
     &__btn {
       &__circle {
         width: 6%;
@@ -404,6 +609,10 @@
         background-color: g.$cBrand-color;
         margin-left: auto;
         margin-right: 0;
+        @include g.mq(tab) {
+          margin-bottom: -6.5%;
+          width: 9%;
+        }
         & a {
           width: 100%;
           height: 100%;
@@ -414,6 +623,9 @@
           & svg {
             width: 40%;
             height: auto;
+            @include g.mq(tab) {
+              width: 60%;
+            }
           }
         }
       }
@@ -421,24 +633,43 @@
 
     &__con {
       display: flex;
+      @include g.mq(tab) {
+        display: block;
+      }
       &__left {
         width: 60%;
+        @include g.mq(tab) {
+          width: 100%;
+        }
         & h2 {
           @include g.font-en-b;
           @include g.font-24-48__15;
+          @include g.mq(tab) {
+            @include g.font-20-31__15__tab;
+          }
+
           & span {
             @include g.font-jp-b;
             @include g.font-12-24__15;
             display: block;
             font-weight: 500;
             line-height: 3;
+            @include g.mq(tab) {
+              @include g.font-10-15__15__tab;
+            }
           }
         }
       }
       &__right {
         width: 40%;
+        @include g.mq(tab) {
+          margin: 3% 0 6%;
+        }
         &__btn {
           width: 55%;
+          @include g.mq(tab) {
+            width: 80%;
+          }
           & a {
             display: flex;
             align-items: center;
@@ -455,6 +686,9 @@
               color: g.$cBrand-color;
               opacity: 1;
             }
+            @include g.mq(tab) {
+              line-height: 2.5;
+            }
           }
         }
       }
@@ -464,8 +698,14 @@
       display: flex;
       justify-content: space-between;
       margin-top: 15%;
+      @include g.mq(tab) {
+        margin-top: 0;
+      }
       &__logo {
         width: 20%;
+        @include g.mq(tab) {
+          width: 28%;
+        }
         &__first {
           & img {
             width: 100%;
@@ -481,14 +721,25 @@
         }
       }
       &__nav {
-        width: 48.5%;
+        width: 35%;
+        @include g.mq(pc) {
+          width: 40%;
+        }
+        @include g.mq(tab) {
+          width: 45%;
+        }
         &__list {
           display: flex;
           justify-content: space-between;
           &__item {
-            margin-left: 8%;
             & a {
-              @include g.font-14-15__15;
+              @include g.font-12-15__15;
+              @include g.mq(pc) {
+                @include g.font-12-13__15__pc;
+              }
+              @include g.mq(tab) {
+                @include g.font-10-12__15__tab;
+              }
             }
           }
         }

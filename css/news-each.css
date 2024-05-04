@@ -48,6 +48,11 @@ a {
   width: 100%;
   height: 60vh;
 }
+@media screen and (max-width: 1024px) {
+  .top-wrap {
+    height: 50vh;
+  }
+}
 .top-wrap__ttl {
   position: absolute;
   top: 50%;
@@ -74,9 +79,24 @@ a {
   font-size: clamp(0.75rem, 0.545rem + 0.91vw, 1.5rem);
   letter-spacing: clamp(-0.011rem, -0.008rem - 0.01vw, -0.022rem);
 }
+@media screen and (max-width: 768px) {
+  .content-wrap__date p {
+    font-size: clamp(0.75rem, 0.436rem + 1.05vw, 0.938rem);
+    letter-spacing: clamp(-0.011rem, -0.007rem - 0.02vw, -0.014rem);
+  }
+}
+.content-wrap__ttl {
+  margin-bottom: 8%;
+}
 .content-wrap__ttl h2 {
-  font-size: clamp(1.25rem, 1.045rem + 0.91vw, 2rem);
-  letter-spacing: clamp(-0.019rem, -0.016rem - 0.01vw, -0.03rem);
+  font-size: clamp(1.25rem, 1.114rem + 0.61vw, 1.75rem);
+  letter-spacing: clamp(-0.019rem, -0.017rem - 0.01vw, -0.026rem);
+}
+@media screen and (max-width: 768px) {
+  .content-wrap__ttl h2 {
+    font-size: clamp(0.875rem, 0.037rem + 2.79vw, 1.375rem);
+    letter-spacing: clamp(-0.013rem, -0.001rem - 0.04vw, -0.021rem);
+  }
 }
 .content-wrap__img {
   width: 100%;

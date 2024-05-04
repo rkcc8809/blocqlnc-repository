@@ -29,6 +29,9 @@ a {
     z-index: 0;
     width: 100%;
     height: 60vh;
+    @include g.mq(pc) {
+      height: 50vh;
+    }
 
     &__ttl {
       position: absolute;
@@ -57,11 +60,18 @@ a {
       & p {
         @include g.font-en-b;
         @include g.font-12-24__15;
+        @include g.mq(tab) {
+          @include g.font-12-15__15__tab;
+        }
       }
     }
     &__ttl {
+      margin-bottom: 8%;
       & h2 {
-        @include g.font-20-32__15;
+        @include g.font-20-28__15;
+        @include g.mq(tab) {
+          @include g.font-14-22__15__tab;
+        }
       }
     }
     &__img {

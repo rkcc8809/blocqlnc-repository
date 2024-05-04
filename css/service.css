@@ -35,6 +35,11 @@ li {
   width: 100%;
   height: 70vh;
 }
+@media screen and (max-width: 1024px) {
+  .top-wrap {
+    height: 50vh;
+  }
+}
 .top-wrap__ttl {
   position: absolute;
   top: 50%;
@@ -89,10 +94,22 @@ li {
   top: 13px;
   left: 13px;
 }
+@media screen and (max-width: 768px) {
+  .feature-wrap__con__block__left__img::before {
+    top: 6px;
+    left: 6px;
+  }
+}
 .feature-wrap__con__block__left__img.different-style::before {
   top: 13px;
   left: -13px;
   background: linear-gradient(to bottom left, #fecd22, #fe4d02);
+}
+@media screen and (max-width: 768px) {
+  .feature-wrap__con__block__left__img.different-style::before {
+    top: 6px;
+    left: -6px;
+  }
 }
 .feature-wrap__con__block__left__img img {
   width: 100%;
@@ -110,31 +127,72 @@ li {
 .feature-wrap__con__block__right__ttl h3 {
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-size: clamp(2.25rem, 1.636rem + 2.73vw, 4.5rem);
-  letter-spacing: 0;
+  font-size: clamp(3.5rem, 0.643rem + 4.46vw, 6rem);
+  letter-spacing: clamp(-0.052rem, 0.028rem - 0.13vw, -0.09rem);
   background: linear-gradient(to bottom right, #fecd22, #fe4d02);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
+@media screen and (max-width: 1024px) {
+  .feature-wrap__con__block__right__ttl h3 {
+    font-size: clamp(3rem, 1.5rem + 3.13vw, 3.5rem);
+    letter-spacing: clamp(-0.045rem, -0.09rem + 0.09vw, -0.03rem);
+  }
+}
+@media screen and (max-width: 768px) {
+  .feature-wrap__con__block__right__ttl h3 {
+    font-size: clamp(2rem, 0.324rem + 5.57vw, 3rem);
+    letter-spacing: clamp(-0.03rem, -0.005rem - 0.08vw, -0.045rem);
+  }
+}
 .feature-wrap__con__block__right__ttl h3:nth-of-type(2) {
   margin-top: -15px;
+}
+@media screen and (max-width: 768px) {
+  .feature-wrap__con__block__right__ttl h3:nth-of-type(2) {
+    margin-top: -11px;
+  }
 }
 .feature-wrap__con__block__right__ttl span {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;
-  font-size: clamp(0.875rem, 0.636rem + 1.06vw, 1.75rem);
-  letter-spacing: clamp(-0.001rem, 0.006rem - 0.03vw, -0.026rem);
+  font-size: clamp(1.25rem, 0.107rem + 1.79vw, 2.25rem);
+  letter-spacing: clamp(-0.019rem, -0.015rem - 0.02vw, -0.034rem);
   display: block;
   color: #fff;
   line-height: 1.6;
 }
+@media screen and (max-width: 1024px) {
+  .feature-wrap__con__block__right__ttl span {
+    font-size: clamp(1rem, 0.25rem + 1.56vw, 1.25rem);
+    letter-spacing: clamp(-0.015rem, -0.004rem - 0.02vw, -0.019rem);
+  }
+}
+@media screen and (max-width: 768px) {
+  .feature-wrap__con__block__right__ttl span {
+    font-size: clamp(0.625rem, -0.003rem + 2.09vw, 1rem);
+    letter-spacing: clamp(-0.009rem, -0.03vw, -0.015rem);
+  }
+}
 .feature-wrap__con__block__right__txt p {
-  font-size: clamp(0.75rem, 0.682rem + 0.3vw, 1rem);
-  letter-spacing: clamp(-0.011rem, -0.01rem + 0vw, -0.015rem);
+  font-size: clamp(0.813rem, 0.027rem + 1.23vw, 1.5rem);
+  letter-spacing: clamp(-0.012rem, -0.02vw, -0.022rem);
   font-weight: 500;
   line-height: 2;
+}
+@media screen and (max-width: 1024px) {
+  .feature-wrap__con__block__right__txt p {
+    font-size: clamp(0.625rem, 0.063rem + 1.17vw, 0.813rem);
+    letter-spacing: clamp(-0.01rem, -0.005rem - 0.01vw, -0.012rem);
+  }
+}
+@media screen and (max-width: 768px) {
+  .feature-wrap__con__block__right__txt p {
+    font-size: clamp(0.438rem, 0.123rem + 1.05vw, 0.625rem);
+    letter-spacing: clamp(-0.007rem, -0.002rem - 0.02vw, -0.009rem);
+  }
 }
 .feature-wrap__con .outer-btn-s {
   width: 25%;

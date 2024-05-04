@@ -48,6 +48,11 @@ a {
   width: 100%;
   height: 70vh;
 }
+@media screen and (max-width: 1024px) {
+  .top-wrap {
+    height: 50vh;
+  }
+}
 .top-wrap__ttl {
   position: absolute;
   top: 50%;
@@ -64,8 +69,18 @@ a {
   letter-spacing: clamp(-0.019rem, -0.01rem - 0.04vw, -0.052rem);
 }
 
+@media screen and (max-width: 768px) {
+  .article-wrap.__inner2 {
+    width: 82.5%;
+  }
+}
 .article-wrap__block {
   margin: 2.5% 0;
+}
+@media screen and (max-width: 768px) {
+  .article-wrap__block {
+    margin: 5% 0;
+  }
 }
 .article-wrap__block__link {
   display: flex;
@@ -76,6 +91,11 @@ a {
   font-size: clamp(1rem, 0.795rem + 0.91vw, 1.75rem);
   letter-spacing: clamp(-0.015rem, -0.012rem - 0.01vw, -0.026rem);
   line-height: 2;
+}
+@media screen and (max-width: 768px) {
+  .article-wrap__block__link__txt__ttl h3 {
+    line-height: 3;
+  }
 }
 .article-wrap__block__link__txt__para p {
   font-size: clamp(0.625rem, 0.523rem + 0.45vw, 1rem);

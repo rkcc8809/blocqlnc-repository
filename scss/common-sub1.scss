@@ -18,7 +18,7 @@
         display: flex;
         align-items: center;
         &__item {
-          margin-right: 10px;
+          margin-right: 0.5%;
 
           vertical-align: middle;
           & a {
@@ -45,6 +45,9 @@
       & h2 {
         @include g.font-16-24__15;
         margin-left: 7.5%;
+        @include g.mq(tab) {
+          @include g.font-12-18__15__tab;
+        }
       }
       &::before {
         position: absolute;

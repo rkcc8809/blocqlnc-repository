@@ -4,49 +4,103 @@ $font-en: "Lato", sans-serif;
 
 $font-15: 15px;
 
-$font-16: 1rem;  //16px
+$font-16: 1rem; //16px
 
 $font-17: 17px;
 
 $font-18: 18px;
 
-$font-20: 1.25rem;  //20px
+$font-20: 1.25rem; //20px
 
-$font-24: 1.5rem;  //24px
+$font-24: 1.5rem; //24px
 
-$font-30: 1.875rem;  //30px
+$font-30: 1.875rem; //30px
 
-$font-32: 2rem;  //32px
+$font-32: 2rem; //32px
 
-$font-36: 2.25rem;  //36px
+$font-36: 2.25rem; //36px
 
-$font-48: 3rem;  //48px
+$font-48: 3rem; //48px
 
 $font-56: 3.5rem; //56px
 
-$font-96: 6rem;  //96px
+$font-96: 6rem; //96px
 
 $font-5-10: clamp(0.313rem, 0.227rem + 0.38vw, 0.625rem);
 
+$font-6-9__tab: clamp(0.375rem, 0.061rem + 1.05vw, 0.563rem);
+
+$font-7-10__tab: clamp(0.438rem, 0.123rem + 1.05vw, 0.625rem);
+
+$font-7-12: clamp(0.438rem, 0.161rem + 0.92vw, 0.75rem);
+
+$font-8-10__tab: clamp(0.5rem, 0.291rem + 0.7vw, 0.625rem);
+
+$font-8-11__tab: clamp(0.5rem, 0.186rem + 1.05vw, 0.688rem);
+
+$font-8-13__tab: clamp(0.5rem, -0.024rem + 1.74vw, 0.813rem);
+
+$font-9-15__tab: clamp(0.563rem, -0.066rem + 2.09vw, 0.938rem);
+
+$font-9-18: clamp(0.563rem, -0.38rem + 3.14vw, 1.125rem);
+
+$font-10-12__tab: clamp(0.625rem, 0.416rem + 0.7vw, 0.75rem);
+
+$font-10-13__tab: clamp(0.625rem, 0.311rem + 1.05vw, 0.813rem);
+
 $font-10-14: clamp(0.625rem, 0.557rem + 0.3vw, 0.875rem);
+
+$font-10-14__tab: clamp(0.625rem, 0.404rem + 0.98vw, 0.875rem);
 
 $font-10-15: clamp(0.625rem, 0.54rem + 0.38vw, 0.938rem);
 
+$font-10-15__tab: clamp(0.625rem, 0.101rem + 1.74vw, 0.938rem);
+
 $font-10-16: clamp(0.625rem, 0.523rem + 0.45vw, 1rem);
+
+$font-10-16__tab: clamp(0.625rem, -0.003rem + 2.09vw, 1rem);
+
+$font-10-16__full__tab: clamp(0.625rem, 0.309rem + 0.66vw, 1rem);
+
+$font-10-17__pc: clamp(0.625rem, -0.688rem + 2.73vw, 1.063rem);
 
 $font-10-20: clamp(0.625rem, 0.455rem + 0.76vw, 1.25rem);
 
 $font-10-24: clamp(0.625rem, 0.386rem + 1.06vw, 1.5rem);
 
+$font-10-13__pc: clamp(0.625rem, 0.063rem + 1.17vw, 0.813rem);
+
+$font-11-14__pc: clamp(0.688rem, 0.125rem + 1.17vw, 0.875rem);
+
+$font-11-14__tab: clamp(0.688rem, 0.373rem + 1.05vw, 0.875rem);
+
+$font-11-15: clamp(0.688rem, 0.269rem + 1.39vw, 0.938rem);
+
+$font-12-13: clamp(0.75rem, 0.695rem + 0.18vw, 0.813rem);
+
+$font-12-15: clamp(0.75rem, 0.661rem + 0.29vw, 0.938rem);
+
+$font-12-15__tab: clamp(0.75rem, 0.436rem + 1.05vw, 0.938rem);
+
 $font-12-16: clamp(0.75rem, 0.682rem + 0.3vw, 1rem);
 
+$font-12-16__pc: clamp(0.75rem, 0.529rem + 0.74vw, 1rem);
+
+$font-12-16__pc2: clamp(0.75rem, 1.56vw, 1rem);
+
 $font-12-18: clamp(0.75rem, 0.648rem + 0.45vw, 1.125rem);
+
+$font-12-18__tab: clamp(0.75rem, 0.122rem + 2.09vw, 1.125rem);
 
 $font-12-20: clamp(0.75rem, 0.614rem + 0.61vw, 1.25rem);
 
 $font-12-24: clamp(0.75rem, 0.545rem + 0.91vw, 1.5rem);
 
+$font-13-24__full: clamp(0.813rem, 0.027rem + 1.23vw, 1.5rem);
+
 $font-14-15: clamp(0.875rem, 0.858rem + 0.08vw, 0.938rem);
+
+$font-14-16__tab: clamp(0.875rem, 0.667rem + 0.69vw, 1rem);
 
 $font-14-36: clamp(0.875rem, 0.5rem + 1.67vw, 2.25rem);
 
@@ -54,11 +108,27 @@ $font-10-18: clamp(0.625rem, 0.489rem + 0.61vw, 1.125rem);
 
 $font-14-20: clamp(0.875rem, 0.773rem + 0.45vw, 1.25rem);
 
+$font-14-20__2: clamp(0.875rem, 0.482rem + 0.82vw, 1.25rem);
+
+$font-14-22__tab: clamp(0.875rem, 0.037rem + 2.79vw, 1.375rem);
+
+$font-14-23: clamp(0.875rem, -0.068rem + 3.14vw, 1.438rem);
+
 $font-14-24: clamp(0.625rem, 0.386rem + 1.06vw, 1.5rem);
+
+$font-14-24__full: clamp(0.875rem, 0.161rem + 1.12vw, 1.5rem);
 
 $font-14-28: clamp(0.875rem, 0.636rem + 1.06vw, 1.75rem);
 
 $font-14-32: clamp(0.875rem, 0.568rem + 1.36vw, 2rem);
+
+$font-15-19__tab: clamp(0.938rem, 0.519rem + 1.39vw, 1.188rem);
+
+$font-15-22__tab: clamp(0.938rem, 0.204rem + 2.44vw, 1.375rem);
+
+$font-16-17__pc: clamp(1rem, 0.813rem + 0.39vw, 1.063rem);
+
+$font-16-20__tab: clamp(1rem, 0.25rem + 1.56vw, 1.25rem);
 
 $font-16-24: clamp(1rem, 0.864rem + 0.61vw, 1.5rem);
 
@@ -68,23 +138,39 @@ $font-16-32: clamp(1rem, 0.727rem + 1.21vw, 2rem);
 
 $font-16-36: clamp(1rem, 0.659rem + 1.52vw, 2.25rem);
 
+$font-16-36__full: clamp(1rem, -0.429rem + 2.23vw, 2.25rem);
+
+$font-18-26: clamp(1.125rem, 0.924rem + 0.67vw, 1.625rem);
+
 $font-18-28: clamp(1.125rem, 0.955rem + 0.76vw, 1.75rem);
 
 $font-18-32: clamp(1.125rem, 0.886rem + 1.06vw, 2rem);
 
+$font-20-24__full: clamp(1.25rem, 0.964rem + 0.45vw, 1.5rem);
+
 $font-20-28: clamp(1.25rem, 1.114rem + 0.61vw, 1.75rem);
+
+$font-20-31__tab: clamp(1.25rem, 0.098rem + 3.83vw, 1.938rem);
 
 $font-20-32: clamp(1.25rem, 1.045rem + 0.91vw, 2rem);
 
 $font-20-36: clamp(1.25rem, 0.977rem + 1.21vw, 2.25rem);
 
+$font-20-36__full: clamp(1.25rem, 0.107rem + 1.79vw, 2.25rem);
+
 $font-20-48: clamp(1.25rem, 0.773rem + 2.12vw, 3rem);
 
+$font-20-48__2: clamp(1.25rem, 0.644rem + 2.69vw, 3rem);
+
 $font-20-56: clamp(1.25rem, 0.636rem + 2.73vw, 3.5rem);
+
+$font-24-47: clamp(1.5rem, -0.909rem + 8.01vw, 2.938rem);
 
 $font-24-48: clamp(1.5rem, 1.091rem + 1.82vw, 3rem);
 
 $font-16-32: clamp(1rem, 0.727rem + 1.21vw, 2rem);
+
+$font-32-48__tab: clamp(2rem, 0.324rem + 5.57vw, 3rem);
 
 $font-32-72: clamp(2rem, 1.318rem + 3.03vw, 4.5rem);
 
@@ -92,4 +178,8 @@ $font-36-72: clamp(2.25rem, 1.636rem + 2.73vw, 4.5rem);
 
 $font-36-80: clamp(2.25rem, 1.5rem + 3.33vw, 5rem);
 
+$font-48-56: clamp(3rem, 1.5rem + 3.13vw, 3.5rem);
+
 $font-36-96: clamp(2.25rem, 1.227rem + 4.55vw, 6rem);
+
+$font-56-96__full: clamp(3.5rem, 0.643rem + 4.46vw, 6rem);

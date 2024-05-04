@@ -14,6 +14,9 @@
     z-index: 0;
     width: 100%;
     height: 70vh;
+    @include g.mq(pc) {
+      height: 50vh;
+    }
 
     &__ttl {
       position: absolute;
@@ -33,7 +36,13 @@
 }
 
 .greet {
+  &.__section2 {
+    margin: 5% 0;
+  }
   &-wrap {
+    &.__inner2 {
+      width: 80%;
+    }
     &__top {
       &__img {
         width: 60%;
@@ -52,6 +61,9 @@
           @include g.font-en-b;
           @include g.font-20-48__15;
           color: g.$cBrand-color;
+          @include g.mq(tab) {
+            line-height: 1.6;
+          }
         }
         & p {
           @include g.font-14-24__15;
@@ -65,9 +77,16 @@
       margin-top: 10%;
       display: flex;
       justify-content: space-between;
+      @include g.mq(tab) {
+        display: block;
+      }
       &__img {
         width: 30%;
         aspect-ratio: 1 / 1;
+        @include g.mq(tab) {
+          margin: 15% auto 10%;
+          width: 35%;
+        }
         & img {
           width: 100%;
           display: block;
@@ -79,6 +98,10 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @include g.mq(tab) {
+          display: block;
+          width: 100%;
+        }
         & p {
           font-family: "Shippori Mincho B1", serif;
           &:nth-of-type(1) {
@@ -91,6 +114,10 @@
             font-weight: 700;
             margin-left: auto;
             margin-right: 0;
+            @include g.mq(tab) {
+              text-align: right;
+              margin: 5% 0;
+            }
           }
         }
       }
@@ -101,16 +128,23 @@
 .intro {
   overflow: hidden;
   &-wrap {
+    &.__inner2 {
+      width: 80%;
+    }
     &__ttl {
       text-align: center;
       & h2 {
-        @include g.font-20-48__15;
+        @include g.font-20-36__15;
       }
       & p {
         @include g.font-12-16__15;
         font-weight: 400;
         margin-top: 5%;
         line-height: 1.7;
+        @include g.mq(tab) {
+          margin-top: 8%;
+          @include g.font-10-13__15__tab;
+        }
       }
     }
 
@@ -129,10 +163,18 @@
         background-color: g.$cBrand-color;
         padding: 10% 0;
         clip-path: polygon(0% 30%, 100% 0, 100% 70%, 0% 100%);
+        @include g.mq(tab) {
+          clip-path: polygon(0% 15%, 100% 0, 100% 85%, 0% 100%);
+          padding: 12% 0 15%;
+        }
         &__item {
           display: flex;
           justify-content: space-between;
           margin-top: 2.5%;
+          @include g.mq(tab) {
+            display: block;
+            margin-top: 0;
+          }
           &.__rev {
             flex-flow: row-reverse;
           }
@@ -140,8 +182,23 @@
             width: 21%;
             object-fit: 1 / 1;
             margin-top: 5%;
+            @include g.mq(tab) {
+              margin: 0 auto;
+              width: 27.5%;
+            }
             &.__rev {
               transform: translateY(-35%);
+              @include g.mq(tab) {
+                transform: translateY(0);
+              }
+            }
+            &.__rev2 {
+              @include g.mq(pc) {
+                transform: translateY(-15%);
+              }
+              @include g.mq(tab) {
+                transform: translateY(0);
+              }
             }
             & img {
               width: 100%;
@@ -151,16 +208,29 @@
           }
           &__con {
             width: 75%;
+            @include g.mq(tab) {
+              width: 100%;
+            }
             &.__rev {
               margin-top: 5%;
+              @include g.mq(tab) {
+                margin-top: 0;
+              }
             }
             &__ttl {
               & h3 {
                 @include g.font-en-b;
                 @include g.font-14-24__15;
                 font-weight: 500;
+                @include g.mq(tab) {
+                  text-align: center;
+                  margin: 3.5% 0;
+                }
                 & span {
                   margin-left: 5%;
+                  @include g.mq(pc) {
+                    margin-left: 3%;
+                  }
                 }
               }
             }
@@ -169,6 +239,9 @@
               align-items: center;
               gap: 2%;
               margin: 3.5% 0;
+              @include g.mq(tab) {
+                justify-content: center;
+              }
               &__link {
                 & img {
                   width: 20px;
@@ -202,14 +275,17 @@
 .info {
   margin-bottom: 5%;
   &-wrap {
+    &.__inner4 {
+      width: 80%;
+    }
     &__ttl {
       & h2 {
-        @include g.font-24-48__15;
+        @include g.font-20-36__15;
       }
     }
     &__body {
       &__list {
-        margin: 10% 0;
+        margin: 10% 0 7%;
         &__item {
           display: flex;
           align-items: center;
@@ -239,6 +315,9 @@
         display: block;
         width: 100%;
         filter: grayscale(100%);
+        @include g.mq(tab) {
+          height: 30vh;
+        }
       }
     }
   }

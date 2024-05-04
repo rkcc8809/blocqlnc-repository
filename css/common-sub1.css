@@ -39,7 +39,7 @@ li {
   align-items: center;
 }
 .breadcrumb-wrap__nav__list__item {
-  margin-right: 10px;
+  margin-right: 0.5%;
   vertical-align: middle;
 }
 .breadcrumb-wrap__nav__list__item a {
@@ -64,6 +64,12 @@ li {
   font-size: clamp(1rem, 0.864rem + 0.61vw, 1.5rem);
   letter-spacing: clamp(-0.015rem, -0.013rem - 0.01vw, -0.022rem);
   margin-left: 7.5%;
+}
+@media screen and (max-width: 768px) {
+  .fea-wrap__ttl h2 {
+    font-size: clamp(0.75rem, 0.122rem + 2.09vw, 1.125rem);
+    letter-spacing: clamp(-0.011rem, -0.002rem - 0.03vw, -0.017rem);
+  }
 }
 .fea-wrap__ttl::before {
   position: absolute;

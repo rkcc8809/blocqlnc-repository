@@ -48,6 +48,11 @@ a {
   width: 100%;
   height: 60vh;
 }
+@media screen and (max-width: 1024px) {
+  .top-wrap {
+    height: 50vh;
+  }
+}
 .top-wrap__ttl {
   position: absolute;
   top: 50%;
@@ -68,6 +73,11 @@ a {
 .con {
   margin-bottom: 5%;
 }
+@media screen and (max-width: 768px) {
+  .con {
+    margin-top: 5%;
+  }
+}
 .con-wrap__txt p {
   font-size: clamp(0.625rem, 0.489rem + 0.61vw, 1.125rem);
   letter-spacing: clamp(-0.009rem, -0.007rem - 0.01vw, -0.017rem);
@@ -75,8 +85,21 @@ a {
   font-weight: 500;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .con-wrap__txt p {
+    line-height: 2;
+    font-size: clamp(0.625rem, 0.416rem + 0.7vw, 0.75rem);
+    letter-spacing: clamp(-0.009rem, -0.006rem - 0.01vw, -0.011rem);
+  }
+}
 .con-wrap .b-btn {
   margin-top: 3.5%;
+}
+@media screen and (max-width: 768px) {
+  .con-wrap .b-btn {
+    margin-top: 6%;
+    margin-bottom: 6%;
+  }
 }
 .con-wrap .b-btn a span {
   margin: 0 2.5%;
