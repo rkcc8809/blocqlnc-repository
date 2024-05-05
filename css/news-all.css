@@ -53,11 +53,32 @@ a {
     height: 50vh;
   }
 }
+@media screen and (max-width: 768px) {
+  .top-wrap {
+    height: 35vh;
+  }
+}
+@media screen and (max-width: 480px) {
+  .top-wrap {
+    height: 60vh;
+  }
+}
 .top-wrap__ttl {
   position: absolute;
   top: 50%;
   left: 7.5%;
   transform: translateY(-25%);
+}
+@media screen and (max-width: 768px) {
+  .top-wrap__ttl {
+    top: 67.5%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .top-wrap__ttl {
+    top: 77.5%;
+    left: 10%;
+  }
 }
 .top-wrap__ttl h1 {
   font-family: "Lato", sans-serif;
@@ -70,6 +91,11 @@ a {
   color: #fff;
 }
 
+@media screen and (max-width: 480px) {
+  .article {
+    margin: 12.5% 0;
+  }
+}
 @media screen and (max-width: 768px) {
   .article-wrap.__inner2 {
     width: 82.5%;
@@ -83,10 +109,20 @@ a {
     margin: 5% 0;
   }
 }
+@media screen and (max-width: 480px) {
+  .article-wrap__block {
+    margin: 7.5% 0;
+  }
+}
 .article-wrap__block__link {
   display: flex;
   justify-content: space-between;
   color: #110800;
+}
+@media screen and (max-width: 480px) {
+  .article-wrap__block__link {
+    display: block;
+  }
 }
 .article-wrap__block__link__img {
   width: 25%;
@@ -95,6 +131,12 @@ a {
 @media screen and (max-width: 768px) {
   .article-wrap__block__link__img {
     width: 42.5%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .article-wrap__block__link__img {
+    width: 80%;
+    margin: 0 auto;
   }
 }
 .article-wrap__block__link__img img {
@@ -115,6 +157,17 @@ a {
     width: 52.5%;
   }
 }
+@media screen and (max-width: 480px) {
+  .article-wrap__block__link__txt {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .article-wrap__block__link__txt__ttl {
+    margin: 5% 0;
+  }
+}
 .article-wrap__block__link__txt__ttl h3 {
   font-size: clamp(1.125rem, 0.924rem + 0.67vw, 1.625rem);
   letter-spacing: clamp(-0.017rem, -0.014rem - 0.01vw, -0.024rem);
@@ -123,6 +176,11 @@ a {
   .article-wrap__block__link__txt__ttl h3 {
     font-size: clamp(0.938rem, 0.519rem + 1.39vw, 1.188rem);
     letter-spacing: clamp(-0.014rem, -0.008rem - 0.02vw, -0.018rem);
+  }
+}
+@media screen and (max-width: 480px) {
+  .article-wrap__block__link__txt__ttl h3 {
+    font-size: 1.125rem;
   }
 }
 .article-wrap__block__link__txt__para p {
@@ -135,6 +193,17 @@ a {
   .article-wrap__block__link__txt__para p {
     font-size: clamp(0.5rem, 0.291rem + 0.7vw, 0.625rem);
     letter-spacing: clamp(-0.007rem, -0.004rem - 0.01vw, -0.009rem);
+  }
+}
+@media screen and (max-width: 480px) {
+  .article-wrap__block__link__txt__para p {
+    text-align: left;
+    font-size: 0.625rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .article-wrap__block__link__txt__date {
+    margin: 3% 0;
   }
 }
 .article-wrap__block__link__txt__date p {
@@ -150,8 +219,19 @@ a {
     letter-spacing: clamp(-0.01rem, -0.006rem - 0.02vw, -0.013rem);
   }
 }
+@media screen and (max-width: 480px) {
+  .article-wrap__block__link__txt__date p {
+    text-align: right;
+    font-size: 0.875rem;
+  }
+}
 .article-wrap__btn {
   margin-top: 7.5%;
+}
+@media screen and (max-width: 480px) {
+  .article-wrap__btn {
+    margin-top: 12.5%;
+  }
 }
 .article-wrap__btn__list {
   display: flex;
@@ -162,6 +242,11 @@ a {
   width: 9%;
   text-align: center;
 }
+@media screen and (max-width: 480px) {
+  .article-wrap__btn__list__item {
+    width: 15%;
+  }
+}
 .article-wrap__btn__list__item__link {
   color: #fe4d02;
   font-family: "Lato", sans-serif;
@@ -169,6 +254,11 @@ a {
   font-size: clamp(0.625rem, 0.386rem + 1.06vw, 1.5rem);
   letter-spacing: clamp(-0.013rem, -0.011rem - 0.01vw, -0.022rem);
   padding: 20% 28%;
+}
+@media screen and (max-width: 480px) {
+  .article-wrap__btn__list__item__link {
+    font-size: 0.875rem;
+  }
 }
 .article-wrap__btn__list__item__link.__now {
   color: #fff;
@@ -183,6 +273,11 @@ a {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;
   white-space: nowrap;
+}
+@media screen and (max-width: 480px) {
+  .article-wrap__btn__list__item__link.__next {
+    font-size: 0.875rem;
+  }
 }
 
 .footer h2, .footer a, .footer small {

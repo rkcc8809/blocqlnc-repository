@@ -32,12 +32,25 @@ a {
     @include g.mq(pc) {
       height: 50vh;
     }
+    @include g.mq(tab) {
+      height: 35vh;
+    }
+    @include g.mq(sp) {
+      height: 60vh;
+    }
 
     &__ttl {
       position: absolute;
       top: 50%;
       left: 7.5%;
       transform: translateY(-25%);
+      @include g.mq(tab) {
+        top: 67.5%;
+      }
+      @include g.mq(sp) {
+        top: 77.5%;
+        left: 10%;
+      }
 
       & h1 {
         @include g.font-en-b;
@@ -51,7 +64,13 @@ a {
 }
 
 .content {
+  @include g.mq(sp) {
+    margin: 15% 0 12%;
+  }
   &-wrap {
+    @include g.mq(sp) {
+      width: 90%;
+    }
     & > * {
       margin-bottom: 4%;
       @include g.mq(tab) {
@@ -62,22 +81,28 @@ a {
       @include g.mq(tab) {
         margin-bottom: 3%;
       }
+      @include g.mq(sp) {
+        margin-bottom: 5%;
+      }
       & p {
         @include g.font-en-b;
         @include g.font-12-24__15;
         @include g.mq(tab) {
-          @include g.font-12-15__15__tab;
+          font-size: 0.75rem;
         }
       }
     }
     &__ttl {
-       @include g.mq(tab) {
+      @include g.mq(tab) {
         margin-bottom: 6%;
+      }
+      @include g.mq(sp) {
+        margin-bottom: 8%;
       }
       & h2 {
         @include g.font-20-28__15;
         @include g.mq(tab) {
-          @include g.font-15-22__15__tab;
+          font-size: 1.25rem;
         }
       }
     }
@@ -88,12 +113,18 @@ a {
         font-weight: 500;
         margin-bottom: 2.5%;
         @include g.mq(tab) {
-          @include g.font-10-13__15__tab;
+          font-size: 0.75rem;
+        }
+        @include g.mq(sp) {
+          margin-bottom: 6%;
         }
       }
     }
     & .b-btn {
       margin-top: 7.5%;
+      @include g.mq(sp) {
+        margin-top: 10%;
+      }
       & a {
         & span {
           margin: 0 2.5%;
@@ -103,6 +134,9 @@ a {
         & .__icon-arrow__rev {
           vertical-align: sub;
           width: 5%;
+          @include g.mq(sp) {
+            width: 8%;
+          }
           & svg {
             width: 100%;
           }

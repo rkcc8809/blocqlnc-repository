@@ -17,6 +17,9 @@
     @include g.mq(pc) {
       background-position: 20%;
     }
+    @include g.mq(sp) {
+      background-position: 27%;
+    }
 
     &__ttl {
       & h1 {
@@ -26,11 +29,17 @@
         position: absolute;
         bottom: 15%;
         left: 5%;
+        @include g.mq(sp) {
+          bottom: 21%;
+        }
       }
       & .ttl__sub {
         position: absolute;
         left: 5%;
         bottom: 7.5%;
+        @include g.mq(sp) {
+          bottom: 13.5%;
+        }
       }
     }
   }
@@ -43,14 +52,22 @@
       &__block {
         display: flex;
         justify-content: space-between;
+        @include g.mq(sp) {
+          display: block;
+          margin-bottom: 30%;
+        }
         &:nth-of-type(2) {
           flex-flow: row-reverse;
-          margin-top: 10%;
+          margin-top: 15%;
         }
 
         &__left {
           width: 50%;
           aspect-ratio: 75 / 44;
+          @include g.mq(sp) {
+            width: 90%;
+            margin: 0 auto;
+          }
           & img {
             width: 100%;
             height: 100%;
@@ -60,10 +77,14 @@
         }
 
         &__right {
-          width: 45%;
+          width: 46%;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          @include g.mq(sp) {
+            width: 90%;
+            margin: 0 auto;
+          }
 
           &__ttl {
             & h2 {
@@ -78,10 +99,24 @@
                   @include g.font-9-18__15__tab;
                 }
               }
+              @include g.mq(sp) {
+                margin-top: 5%;
+                text-align: center;
+                @include g.font-20-22__5__sp;
+                & .initial-text {
+                  @include g.font-36-40__5__sp;
+                }
+                & .s-ttl__sub {
+                  @include g.font-14-16__15__sp;
+                }
+              }
             }
           }
 
           &__txt {
+            @include g.mq(sp) {
+              margin: 7.5% 0;
+            }
             & p {
               @include g.font-10-15__15;
               @include g.mq(pc) {
@@ -91,6 +126,9 @@
                 @include g.font-6-9__15__tab;
                 line-height: 1.2;
               }
+              @include g.mq(sp) {
+                @include g.font-10-12__15__sp;
+              }
 
               line-height: 1.7;
               &:nth-of-type(2) {
@@ -98,14 +136,25 @@
               }
             }
           }
-          & .inner-btn-s {
-            @include g.mq(tab) {
-              line-height: 2.4;
-              & .__arrow {
-                @include g.font-9-15__15__tab;
+          & .outer-btn-s {
+            @include g.mq(sp) {
+              margin-right: auto;
+            }
+            & .inner-btn-s {
+              @include g.mq(tab) {
+                line-height: 2.4;
+                & .__arrow {
+                  @include g.font-9-15__15__tab;
+                }
+                & .__text {
+                  margin-top: 0;
+                }
               }
-              & .__text {
-                margin-top: 0;
+              @include g.mq(sp) {
+                line-height: 2.2;
+                & .__arrow {
+                  font-size: 1rem;
+                }
               }
             }
           }
@@ -128,6 +177,7 @@
 }
 
 .news {
+  margin-top: 15%;
   &-wrap {
     & .c-ttl {
       margin: 2.5% 0;
@@ -215,6 +265,9 @@
 }
 
 .blog {
+  @include g.mq(sp) {
+    margin: 20% 0 10%;
+  }
   &-wrap {
     & .c-ttl {
       margin: 2.5% 0;
@@ -247,6 +300,9 @@
       &__list {
         width: 70%;
         margin: 0 auto;
+        @include g.mq(sp) {
+          width: 100%;
+        }
         & hr {
           margin: 0.5em 0;
         }

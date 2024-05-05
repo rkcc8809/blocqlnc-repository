@@ -24,7 +24,7 @@ a {
   &-wrap {
     background-image: url("../img/contact-bg.jpeg");
     background-size: cover;
-    background-position: 50%;
+    background-position: 30%;
     position: relative;
     z-index: 0;
     width: 100%;
@@ -32,12 +32,25 @@ a {
     @include g.mq(pc) {
       height: 50vh;
     }
+    @include g.mq(tab) {
+      height: 35vh;
+    }
+    @include g.mq(sp) {
+      height: 60vh;
+    }
 
     &__ttl {
       position: absolute;
       top: 50%;
       left: 7.5%;
       transform: translateY(-25%);
+      @include g.mq(tab) {
+        top: 67.5%;
+      }
+      @include g.mq(sp) {
+        top: 77.5%;
+        left: 10%;
+      }
 
       & h1 {
         @include g.font-en-b;
@@ -56,6 +69,10 @@ a {
   @include g.mq(tab) {
     margin-top: 5%;
   }
+  @include g.mq(sp) {
+    margin-top: 12%;
+    margin-bottom: 10%;
+  }
   &-wrap {
     &__txt {
       & p {
@@ -67,6 +84,9 @@ a {
           line-height: 2;
           @include g.font-10-12__15__tab;
         }
+        @include g.mq(sp) {
+          line-height: 2.4;
+        }
       }
     }
     & .b-btn {
@@ -74,6 +94,9 @@ a {
       @include g.mq(tab) {
         margin-top: 6%;
         margin-bottom: 6%;
+      }
+      @include g.mq(sp) {
+        margin-top: 10%;
       }
       & a {
         & span {
@@ -84,6 +107,9 @@ a {
         & .__icon-arrow__rev {
           vertical-align: sub;
           width: 5%;
+          @include g.mq(sp) {
+            width: 8%;
+          }
           & svg {
             width: 100%;
           }

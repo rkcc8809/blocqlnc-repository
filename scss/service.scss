@@ -17,12 +17,25 @@
     @include g.mq(pc) {
       height: 50vh;
     }
+    @include g.mq(tab) {
+      height: 35vh;
+    }
+    @include g.mq(sp) {
+      height: 60vh;
+    }
 
     &__ttl {
       position: absolute;
       top: 50%;
       left: 7.5%;
       transform: translateY(-25%);
+      @include g.mq(tab) {
+        top: 67.5%;
+      }
+      @include g.mq(sp) {
+        top: 77.5%;
+        left: 10%;
+      }
 
       & h1 {
         @include g.font-en-b;
@@ -43,11 +56,19 @@
         display: flex;
         gap: 3.5%;
         margin: 10% 0;
+        @include g.mq(sp) {
+          display: block;
+          width: 90%;
+          margin: 10% auto;
+        }
         &:nth-of-type(2) {
           flex-flow: row-reverse;
         }
         &__left {
           width: 50%;
+          @include g.mq(sp) {
+            width: 100%;
+          }
           &__img {
             width: 100%;
             aspect-ratio: 21 / 11;
@@ -112,7 +133,19 @@
           flex-direction: column;
           justify-content: space-between;
           width: 39.5%;
+          @include g.mq(sp) {
+            width: 100%;
+            display: block;
+          }
+          &.__sp__rev {
+            @include g.mq(sp) {
+              text-align: right;
+            }
+          }
           &__ttl {
+            @include g.mq(sp) {
+              margin: 10% 0 7%;
+            }
             & h3 {
               @include g.font-en-b;
               @include g.font-56-96__15__full;
@@ -121,6 +154,9 @@
               }
               @include g.mq(tab) {
                 @include g.font-32-48__15__tab;
+              }
+              @include g.mq(sp) {
+                @include g.font-36-43__15__sp;
               }
               background: linear-gradient(
                 to bottom right,
@@ -150,6 +186,10 @@
               @include g.mq(tab) {
                 @include g.font-10-16__15__tab;
               }
+              @include g.mq(sp) {
+                @include g.font-14-17__15__sp;
+                margin-top: 1.5%;
+              }
             }
           }
           &__txt {
@@ -163,15 +203,27 @@
               @include g.mq(tab) {
                 @include g.font-7-10__15__tab;
               }
+              @include g.mq(sp) {
+                @include g.font-12-14__15__sp;
+              }
             }
           }
         }
       }
       & .outer-btn-s {
         width: 25%;
+        @include g.mq(sp) {
+          width: 55%;
+        }
         & .inner-btn-s {
           width: 100%;
           line-height: 3;
+          & .__arrow {
+            @include g.mq(sp) {
+              font-size: 1.25rem;
+              line-height: 2.1;
+            }
+          }
         }
       }
     }

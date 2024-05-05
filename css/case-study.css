@@ -40,11 +40,32 @@ li {
     height: 50vh;
   }
 }
+@media screen and (max-width: 768px) {
+  .top-wrap {
+    height: 35vh;
+  }
+}
+@media screen and (max-width: 480px) {
+  .top-wrap {
+    height: 60vh;
+  }
+}
 .top-wrap__ttl {
   position: absolute;
   top: 50%;
   left: 7.5%;
   transform: translateY(-25%);
+}
+@media screen and (max-width: 768px) {
+  .top-wrap__ttl {
+    top: 67.5%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .top-wrap__ttl {
+    top: 77.5%;
+    left: 10%;
+  }
 }
 .top-wrap__ttl h1 {
   font-family: "Lato", sans-serif;
@@ -65,9 +86,19 @@ li {
   height: 100%;
   margin: 7.5% 0;
 }
+@media screen and (max-width: 480px) {
+  .case-wrap__con__block {
+    margin: 18% 0 10%;
+  }
+}
 @media screen and (max-width: 768px) {
   .case-wrap__con__block__body.__inner2 {
     width: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .case-wrap__con__block__body.__inner2 {
+    width: 87.5%;
   }
 }
 .case-wrap__con__block.__first::before {
@@ -85,6 +116,13 @@ li {
   -webkit-text-fill-color: transparent;
   color: transparent;
   overflow: hidden;
+}
+@media screen and (max-width: 480px) {
+  .case-wrap__con__block.__first::before {
+    font-size: clamp(3.5rem, 0.5rem + 13.33vw, 4.5rem);
+    letter-spacing: clamp(-0.052rem, -0.007rem - 0.2vw, -0.068rem);
+    top: 6%;
+  }
 }
 .case-wrap__con__block.__second::before {
   content: "quantum\a computer";
@@ -113,13 +151,28 @@ li {
     bottom: -8%;
   }
 }
+@media screen and (max-width: 480px) {
+  .case-wrap__con__block.__second::before {
+    bottom: 9%;
+  }
+}
 .case-wrap__con__block__ttl {
   position: relative;
+}
+@media screen and (max-width: 480px) {
+  .case-wrap__con__block__ttl {
+    margin-left: 5.5%;
+  }
 }
 .case-wrap__con__block__ttl h2 {
   font-size: clamp(1rem, 0.864rem + 0.61vw, 1.5rem);
   letter-spacing: clamp(-0.015rem, -0.013rem - 0.01vw, -0.022rem);
   margin-left: 7.5%;
+}
+@media screen and (max-width: 480px) {
+  .case-wrap__con__block__ttl h2 {
+    margin-left: 10.5%;
+  }
 }
 .case-wrap__con__block__ttl::before {
   position: absolute;
@@ -129,12 +182,23 @@ li {
   top: 50%;
   background-color: #fff;
 }
+@media screen and (max-width: 480px) {
+  .case-wrap__con__block__ttl::before {
+    width: 8%;
+  }
+}
 .case-wrap__con__block__head {
-  margin: 4% 0;
+  margin: 6% 0 4%;
 }
 .case-wrap__con__block__head h3 {
   font-size: clamp(1.25rem, 1.114rem + 0.61vw, 1.75rem);
   letter-spacing: clamp(-0.019rem, -0.017rem - 0.01vw, -0.026rem);
+}
+@media screen and (max-width: 480px) {
+  .case-wrap__con__block__head {
+    text-align: center;
+    margin: 12% 0;
+  }
 }
 .case-wrap__con__block__txt {
   margin: 4% 0;
@@ -144,6 +208,11 @@ li {
   letter-spacing: clamp(-0.009rem, -0.007rem - 0.01vw, -0.019rem);
   font-weight: 500;
   line-height: 2;
+}
+@media screen and (max-width: 480px) {
+  .case-wrap__con__block__txt {
+    margin: 7.5% 0;
+  }
 }
 .case-wrap__con__block__img {
   width: 100%;
@@ -167,6 +236,12 @@ li {
   font-size: clamp(1.25rem, 1.114rem + 0.61vw, 1.75rem);
   letter-spacing: clamp(-0.019rem, -0.017rem - 0.01vw, -0.026rem);
 }
+@media screen and (max-width: 480px) {
+  .case-wrap__con__block__head2 {
+    text-align: center;
+    margin: 12% 0;
+  }
+}
 .case-wrap__con__block__txt2 p {
   font-size: clamp(0.625rem, 0.455rem + 0.76vw, 1.25rem);
   letter-spacing: clamp(-0.009rem, -0.007rem - 0.01vw, -0.019rem);
@@ -176,4 +251,9 @@ li {
 
 .w-btn2 {
   margin-top: 5%;
+}
+@media screen and (max-width: 480px) {
+  .w-btn2 {
+    margin-top: 15%;
+  }
 }

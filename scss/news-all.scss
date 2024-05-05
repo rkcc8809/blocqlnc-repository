@@ -32,12 +32,29 @@ a {
     @include g.mq(pc) {
       height: 50vh;
     }
+    @include g.mq(tab) {
+      height: 35vh;
+    }
+    @include g.mq(sp) {
+      height: 60vh;
+    }
+
+
 
     &__ttl {
       position: absolute;
       top: 50%;
       left: 7.5%;
       transform: translateY(-25%);
+      @include g.mq(tab) {
+        top: 67.5%;
+      }
+      @include g.mq(sp) {
+        top: 77.5%;
+        left: 10%;
+      }
+
+
 
       & h1 {
         @include g.font-en-b;
@@ -52,6 +69,9 @@ a {
 }
 
 .article {
+  @include g.mq(sp) {
+    margin: 12.5% 0;
+  }
   &-wrap {
     &.__inner2 {
       @include g.mq(tab) {
@@ -63,15 +83,25 @@ a {
       @include g.mq(tab) {
         margin: 5% 0;
       }
+      @include g.mq(sp) {
+        margin: 7.5% 0;
+      }
       &__link {
         display: flex;
         justify-content: space-between;
         color: g.$background-main;
+        @include g.mq(sp) {
+          display: block;
+        }
         &__img {
           width: 25%;
           aspect-ratio: 3 / 2;
           @include g.mq(tab) {
             width: 42.5%;
+          }
+          @include g.mq(sp) {
+            width: 80%;
+            margin: 0 auto;
           }
           & img {
             width: 100%;
@@ -88,11 +118,21 @@ a {
           @include g.mq(tab) {
             width: 52.5%;
           }
+          @include g.mq(sp) {
+            width: 100%;
+            text-align: center;
+          }
           &__ttl {
+            @include g.mq(sp) {
+              margin: 5% 0;
+            }
             & h3 {
               @include g.font-18-26__15;
               @include g.mq(tab) {
                 @include g.font-15-19__15__tab;
+              }
+              @include g.mq(sp) {
+                font-size: 1.125rem;
               }
             }
           }
@@ -104,15 +144,26 @@ a {
               @include g.mq(tab) {
                 @include g.font-8-10__15__tab;
               }
+              @include g.mq(sp) {
+                text-align: left;
+                font-size: 0.625rem;
+              }
             }
           }
           &__date {
+            @include g.mq(sp) {
+              margin: 3% 0;
+            }
             & p {
               @include g.font-14-20__15__2;
               @include g.font-en-b;
               font-weight: 500;
               @include g.mq(tab) {
                 @include g.font-11-14__15__tab;
+              }
+              @include g.mq(sp) {
+                text-align: right;
+                font-size: 0.875rem;
               }
             }
           }
@@ -121,6 +172,9 @@ a {
     }
     &__btn {
       margin-top: 7.5%;
+      @include g.mq(sp) {
+        margin-top: 12.5%;
+      }
       &__list {
         display: flex;
         justify-content: center;
@@ -128,11 +182,17 @@ a {
         &__item {
           width: 9%;
           text-align: center;
+          @include g.mq(sp) {
+            width: 15%;
+          }
           &__link {
             color: g.$cBrand-color;
             @include g.font-en-b;
             @include g.font-14-24__15;
             padding: 20% 28%;
+            @include g.mq(sp) {
+              font-size: 0.875rem;
+            }
             &.__now {
               color: g.$cWhite;
               background-color: g.$cBrand-color;
@@ -144,6 +204,9 @@ a {
               @include g.font-14-24__15;
               @include g.font-jp-b;
               white-space: nowrap;
+              @include g.mq(sp) {
+              font-size: 0.875rem;
+            }
             }
           }
         }

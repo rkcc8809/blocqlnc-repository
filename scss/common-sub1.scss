@@ -12,6 +12,9 @@
 }
 
 .breadcrumb {
+  @include g.mq(sp) {
+    margin: 5.5% 0 5.5% 5.5%;
+  }
   &-wrap {
     &__nav {
       &__list {
@@ -39,14 +42,24 @@
 
 // fea
 .fea {
+  @include g.mq(sp) {
+    margin: 12.5% 0;
+  }
   &-wrap {
     &__ttl {
       position: relative;
+      @include g.mq(sp) {
+        margin-left: 5.5%;
+      }
       & h2 {
         @include g.font-16-24__15;
         margin-left: 7.5%;
         @include g.mq(tab) {
           @include g.font-12-18__15__tab;
+        }
+        @include g.mq(sp) {
+          font-size: 1rem;
+          margin-left: 10.5%;
         }
       }
       &::before {
@@ -56,6 +69,9 @@
         height: 4px;
         top: 50%;
         background-color: g.$cWhite;
+        @include g.mq(sp) {
+          width: 8%;
+        }
       }
     }
   }

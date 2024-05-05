@@ -32,12 +32,28 @@ a {
     @include g.mq(pc) {
       height: 50vh;
     }
+    @include g.mq(tab) {
+      height: 35vh;
+    }
+    @include g.mq(sp) {
+      height: 60vh;
+    }
+
+
 
     &__ttl {
       position: absolute;
       top: 50%;
       left: 7.5%;
       transform: translateY(-25%);
+      @include g.mq(tab) {
+        top: 67.5%;
+      }
+      @include g.mq(sp) {
+        top: 77.5%;
+        left: 10%;
+      }
+
 
       & h1 {
         @include g.font-en-b;
@@ -52,15 +68,24 @@ a {
 }
 
 .con {
+  @include g.mq(sp) {
+    margin: 15% 0 10%;
+  }
   &-wrap {
     &.__inner2 {
       width: 82.5%;
+      @include g.mq(sp) {
+        width: 87.5%;
+      }
     }
     &__txt {
       & p {
         @include g.font-10-16__15;
         line-height: 1.5;
         font-weight: 500;
+        @include g.mq(sp) {
+          line-height: 2;
+        }
       }
     }
     &__policy {
@@ -69,6 +94,9 @@ a {
     }
     & .b-btn {
       margin-top: 3.5%;
+      @include g.mq(sp) {
+        margin-top: 10%;
+      }
       & a {
         & span {
           margin: 0 2.5%;
@@ -78,6 +106,9 @@ a {
         & .__icon-arrow__rev {
           vertical-align: sub;
           width: 5%;
+          @include g.mq(sp) {
+            width: 8%;
+          }
           & svg {
             width: 100%;
           }

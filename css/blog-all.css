@@ -53,11 +53,32 @@ a {
     height: 50vh;
   }
 }
+@media screen and (max-width: 768px) {
+  .top-wrap {
+    height: 35vh;
+  }
+}
+@media screen and (max-width: 480px) {
+  .top-wrap {
+    height: 60vh;
+  }
+}
 .top-wrap__ttl {
   position: absolute;
   top: 50%;
   left: 7.5%;
   transform: translateY(-25%);
+}
+@media screen and (max-width: 768px) {
+  .top-wrap__ttl {
+    top: 67.5%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .top-wrap__ttl {
+    top: 77.5%;
+    left: 10%;
+  }
 }
 .top-wrap__ttl h1 {
   font-family: "Lato", sans-serif;
@@ -74,6 +95,11 @@ a {
     width: 82.5%;
   }
 }
+@media screen and (max-width: 480px) {
+  .article-wrap.__inner2 {
+    width: 90%;
+  }
+}
 .article-wrap__block {
   margin: 2.5% 0;
 }
@@ -82,10 +108,20 @@ a {
     margin: 5% 0;
   }
 }
+@media screen and (max-width: 480px) {
+  .article-wrap__block {
+    margin: 10% 0;
+  }
+}
 .article-wrap__block__link {
   display: flex;
   justify-content: space-between;
   color: #110800;
+}
+@media screen and (max-width: 480px) {
+  .article-wrap__block__link__txt__ttl {
+    text-align: center;
+  }
 }
 .article-wrap__block__link__txt__ttl h3 {
   font-size: clamp(1rem, 0.795rem + 0.91vw, 1.75rem);
@@ -95,6 +131,11 @@ a {
 @media screen and (max-width: 768px) {
   .article-wrap__block__link__txt__ttl h3 {
     line-height: 3;
+  }
+}
+@media screen and (max-width: 480px) {
+  .article-wrap__block__link__txt__para {
+    margin-top: 2%;
   }
 }
 .article-wrap__block__link__txt__para p {
@@ -112,6 +153,12 @@ a {
 .article-wrap__btn {
   margin-top: 7.5%;
 }
+@media screen and (max-width: 480px) {
+  .article-wrap__btn {
+    margin-bottom: 12%;
+    margin-top: 12.5%;
+  }
+}
 .article-wrap__btn__list {
   display: flex;
   justify-content: center;
@@ -120,6 +167,11 @@ a {
   width: 9%;
   text-align: center;
 }
+@media screen and (max-width: 480px) {
+  .article-wrap__btn__list__item {
+    width: 13%;
+  }
+}
 .article-wrap__btn__list__item__link {
   color: #fe4d02;
   font-family: "Lato", sans-serif;
@@ -127,6 +179,11 @@ a {
   font-size: clamp(0.625rem, 0.386rem + 1.06vw, 1.5rem);
   letter-spacing: clamp(-0.013rem, -0.011rem - 0.01vw, -0.022rem);
   padding: 20% 28%;
+}
+@media screen and (max-width: 480px) {
+  .article-wrap__btn__list__item__link {
+    font-size: 0.875rem;
+  }
 }
 .article-wrap__btn__list__item__link.__now {
   color: #fff;
@@ -141,6 +198,11 @@ a {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;
   white-space: nowrap;
+}
+@media screen and (max-width: 480px) {
+  .article-wrap__btn__list__item__link.__next {
+    font-size: 0.875rem;
+  }
 }
 
 .footer h2, .footer a, .footer small {

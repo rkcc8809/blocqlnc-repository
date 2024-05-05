@@ -17,12 +17,25 @@
     @include g.mq(pc) {
       height: 50vh;
     }
+    @include g.mq(tab) {
+      height: 35vh;
+    }
+    @include g.mq(sp) {
+      height: 60vh;
+    }
 
     &__ttl {
       position: absolute;
       top: 50%;
       left: 7.5%;
       transform: translateY(-25%);
+      @include g.mq(tab) {
+        top: 67.5%;
+      }
+      @include g.mq(sp) {
+        top: 77.5%;
+        left: 10%;
+      }
 
       & h1 {
         @include g.font-en-b;
@@ -40,6 +53,9 @@
   &-wrap {
     &__con {
       &__block {
+        @include g.mq(sp) {
+          margin: 18% 0 10%;
+        }
         position: relative;
         width: 100%;
         height: 100%;
@@ -47,6 +63,9 @@
         &__body.__inner2 {
           @include g.mq(tab) {
             width: 80%;
+          }
+          @include g.mq(sp) {
+            width: 87.5%;
           }
         }
         &.__first::before {
@@ -68,6 +87,10 @@
           -webkit-text-fill-color: transparent;
           color: transparent;
           overflow: hidden;
+          @include g.mq(sp) {
+            @include g.font-56-72__15__sp;
+            top: 6%;
+          }
         }
         &.__second::before {
           content: "quantum\A computer";
@@ -95,12 +118,21 @@
           @include g.mq(tab) {
             bottom: -8%;
           }
+          @include g.mq(sp) {
+            bottom: 9%;
+          }
         }
         &__ttl {
           position: relative;
+          @include g.mq(sp) {
+            margin-left: 5.5%;
+          }
           & h2 {
             @include g.font-16-24__15;
             margin-left: 7.5%;
+            @include g.mq(sp) {
+              margin-left: 10.5%;
+            }
           }
           &::before {
             position: absolute;
@@ -109,12 +141,19 @@
             height: 4px;
             top: 50%;
             background-color: g.$cWhite;
+            @include g.mq(sp) {
+              width: 8%;
+            }
           }
         }
         &__head {
-          margin: 4% 0;
+          margin: 6% 0 4%;
           & h3 {
             @include g.font-20-28__15;
+          }
+          @include g.mq(sp) {
+            text-align: center;
+            margin: 12% 0;
           }
         }
         &__txt {
@@ -123,6 +162,9 @@
             @include g.font-10-20__15;
             font-weight: 500;
             line-height: 2;
+          }
+          @include g.mq(sp) {
+            margin: 7.5% 0;
           }
         }
         &__img {
@@ -143,6 +185,10 @@
           & h3 {
             @include g.font-20-28__15;
           }
+          @include g.mq(sp) {
+            text-align: center;
+            margin: 12% 0;
+          }
         }
         &__txt2 {
           & p {
@@ -158,4 +204,7 @@
 
 .w-btn2 {
   margin-top: 5%;
+  @include g.mq(sp) {
+    margin-top: 15%;
+  }
 }
