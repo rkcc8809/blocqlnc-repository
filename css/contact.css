@@ -15,6 +15,8 @@ body {
 a {
   text-decoration: none;
   color: #fff;
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
   transition: all 0.7s;
 }
 
@@ -67,7 +69,9 @@ a {
   position: absolute;
   top: 50%;
   left: 7.5%;
-  transform: translateY(-25%);
+  -webkit-transform: translateY(-25%);
+      -ms-transform: translateY(-25%);
+          transform: translateY(-25%);
 }
 @media screen and (max-width: 768px) {
   .top-wrap__ttl {
@@ -135,9 +139,15 @@ a {
   }
 }
 .contact-wrap__body__form__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 4.5% 0;
 }
 @media screen and (max-width: 480px) {
@@ -283,8 +293,11 @@ a {
   }
 }
 .contact-wrap__body__form__block__second__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 @media screen and (max-width: 480px) {
   .contact-wrap__body__form__block__second__input {
@@ -411,6 +424,8 @@ a {
 }
 .contact-wrap__body__form__block__fourth__policy p a {
   text-decoration: underline;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
   transition: all 0.1s;
 }
 .contact-wrap__body__form__block__fourth__policy p a:hover {
@@ -460,6 +475,8 @@ a {
   background-color: #110800;
   cursor: pointer;
   border: unset;
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
   transition: all 0.7s;
   line-height: 3;
 }
@@ -541,7 +558,9 @@ label[for=check]::after {
   height: 6px;
   border-left: 3px solid #333;
   border-bottom: 3px solid #333;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   opacity: 0;
 }
 @media screen and (max-width: 768px) {

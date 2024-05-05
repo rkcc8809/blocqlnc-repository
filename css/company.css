@@ -15,6 +15,8 @@ body {
 a {
   text-decoration: none;
   color: #fff;
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
   transition: all 0.7s;
 }
 
@@ -54,7 +56,9 @@ li {
   position: absolute;
   top: 50%;
   left: 7.5%;
-  transform: translateY(-25%);
+  -webkit-transform: translateY(-25%);
+      -ms-transform: translateY(-25%);
+          transform: translateY(-25%);
 }
 @media screen and (max-width: 768px) {
   .top-wrap__ttl {
@@ -151,8 +155,12 @@ li {
 }
 .greet-wrap__bottom {
   margin-top: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media screen and (max-width: 768px) {
   .greet-wrap__bottom {
@@ -183,9 +191,16 @@ li {
 }
 .greet-wrap__bottom__txt {
   width: 61.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media screen and (max-width: 768px) {
   .greet-wrap__bottom__txt {
@@ -291,8 +306,12 @@ li {
   }
 }
 .intro-wrap__team__block__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 2.5%;
 }
 @media screen and (max-width: 768px) {
@@ -307,7 +326,10 @@ li {
   }
 }
 .intro-wrap__team__block__item.__rev {
-  flex-flow: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse;
+          flex-flow: row-reverse;
 }
 .intro-wrap__team__block__item__img {
   width: 21%;
@@ -327,21 +349,29 @@ li {
   }
 }
 .intro-wrap__team__block__item__img.__rev {
-  transform: translateY(-35%);
+  -webkit-transform: translateY(-35%);
+      -ms-transform: translateY(-35%);
+          transform: translateY(-35%);
 }
 @media screen and (max-width: 768px) {
   .intro-wrap__team__block__item__img.__rev {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 @media screen and (max-width: 1024px) {
   .intro-wrap__team__block__item__img.__rev2 {
-    transform: translateY(-15%);
+    -webkit-transform: translateY(-15%);
+        -ms-transform: translateY(-15%);
+            transform: translateY(-15%);
   }
 }
 @media screen and (max-width: 768px) {
   .intro-wrap__team__block__item__img.__rev2 {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 .intro-wrap__team__block__item__img img {
@@ -401,14 +431,20 @@ li {
   }
 }
 .intro-wrap__team__block__item__con__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 2%;
   margin: 3.5% 0;
 }
 @media screen and (max-width: 768px) {
   .intro-wrap__team__block__item__con__icon {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media screen and (max-width: 480px) {
@@ -461,8 +497,12 @@ li {
   margin: 10% 0 7%;
 }
 .info-wrap__body__list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 3% 0;
 }
 .info-wrap__body__list__item__left {
@@ -491,7 +531,8 @@ li {
 .info-wrap__map iframe {
   display: block;
   width: 100%;
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 @media screen and (max-width: 768px) {
   .info-wrap__map iframe {
