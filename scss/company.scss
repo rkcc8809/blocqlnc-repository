@@ -299,7 +299,6 @@
             &__icon {
               display: flex;
               align-items: center;
-              // gap: 2%;
               margin: 3.5% 0;
               @include g.mq(tab) {
                 justify-content: center;
