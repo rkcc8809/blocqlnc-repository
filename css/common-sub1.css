@@ -67,6 +67,11 @@ li {
   font-size: clamp(0.75rem, 0.682rem + 0.3vw, 1rem);
   letter-spacing: clamp(-0.011rem, -0.01rem + 0vw, -0.015rem);
 }
+@media screen and (max-width: 480px) {
+  .breadcrumb-wrap__nav__list__item p {
+    margin-top: 3px;
+  }
+}
 
 @media screen and (max-width: 480px) {
   .fea {

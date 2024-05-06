@@ -72,3 +72,13 @@ $(document).ready(function() {
         });
     }
 });
+
+
+// Ensure the DOM is ready before running the script
+$(document).ready(function() {
+    // Add a click event listener to the .scroll-to-top element
+    $('.scroll-to-top').on('click', function(e) {
+        e.preventDefault(); // Prevent the default behavior of the anchor
+        $('html, body').animate({ scrollTop: 0 }, 'smooth'); // Smoothly scroll to the top
+    });
+});

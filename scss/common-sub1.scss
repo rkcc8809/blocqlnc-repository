@@ -33,6 +33,9 @@
             vertical-align: middle;
             @include g.font-en-b;
             @include g.font-12-16__15;
+            @include g.mq(sp) {
+              margin-top: 3px;
+            }
           }
         }
       }
