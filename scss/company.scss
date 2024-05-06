@@ -299,7 +299,7 @@
             &__icon {
               display: flex;
               align-items: center;
-              gap: 2%;
+              // gap: 2%;
               margin: 3.5% 0;
               @include g.mq(tab) {
                 justify-content: center;
@@ -308,6 +308,7 @@
                 gap: 7.5%;
               }
               &__link {
+                width: 100px;
                 & img {
                   width: 20px;
                   height: 20px;
@@ -317,6 +318,7 @@
                   font-weight: 500;
                   text-decoration: underline;
                   vertical-align: text-top;
+                  display: inline-block;
                 }
               }
             }
