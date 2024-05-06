@@ -192,6 +192,7 @@ li {
   .about-wrap__con__block__right__txt p {
     font-size: clamp(0.625rem, 0.25rem + 1.67vw, 0.75rem);
     letter-spacing: clamp(-0.009rem, -0.004rem - 0.03vw, -0.011rem);
+    line-height: 1.7;
   }
 }
 .about-wrap__con__block__right__txt p:nth-of-type(2) {

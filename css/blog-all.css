@@ -190,7 +190,12 @@ a {
   font-weight: 700;
   font-size: clamp(0.625rem, 0.386rem + 1.06vw, 1.5rem);
   letter-spacing: clamp(-0.013rem, -0.011rem - 0.01vw, -0.022rem);
-  padding: 20% 28%;
+  padding: 14% 22%;
+}
+@media screen and (max-width: 768px) {
+  .article-wrap__btn__list__item__link {
+    padding: 20% 28%;
+  }
 }
 @media screen and (max-width: 480px) {
   .article-wrap__btn__list__item__link {

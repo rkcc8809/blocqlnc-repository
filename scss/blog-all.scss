@@ -137,7 +137,10 @@ a {
             color: g.$cBrand-color;
             @include g.font-en-b;
             @include g.font-14-24__15;
-            padding: 20% 28%;
+            padding: 14% 22%;
+            @include g.mq(tab) {
+              padding: 20% 28%;
+            }
             @include g.mq(sp) {
               font-size: 0.875rem;
             }

@@ -39,8 +39,6 @@ a {
       height: 60vh;
     }
 
-
-
     &__ttl {
       position: absolute;
       top: 50%;
@@ -53,8 +51,6 @@ a {
         top: 77.5%;
         left: 10%;
       }
-
-
 
       & h1 {
         @include g.font-en-b;
@@ -189,7 +185,10 @@ a {
             color: g.$cBrand-color;
             @include g.font-en-b;
             @include g.font-14-24__15;
-            padding: 20% 28%;
+            padding: 14% 22%;
+            @include g.mq(tab) {
+              padding: 20% 28%;
+            }
             @include g.mq(sp) {
               font-size: 0.875rem;
             }
@@ -205,8 +204,8 @@ a {
               @include g.font-jp-b;
               white-space: nowrap;
               @include g.mq(sp) {
-              font-size: 0.875rem;
-            }
+                font-size: 0.875rem;
+              }
             }
           }
         }
