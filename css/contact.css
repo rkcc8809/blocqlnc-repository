@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 100%;
   scroll-behavior: smooth;
@@ -16,6 +17,8 @@ body {
 a {
   text-decoration: none;
   color: #fff;
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
   transition: all 0.7s;
 }
 
@@ -68,7 +71,9 @@ a {
   position: absolute;
   top: 50%;
   left: 7.5%;
-  transform: translateY(-25%);
+  -webkit-transform: translateY(-25%);
+      -ms-transform: translateY(-25%);
+          transform: translateY(-25%);
 }
 @media screen and (max-width: 768px) {
   .top-wrap__ttl {
@@ -136,9 +141,15 @@ a {
   }
 }
 .contact-wrap__body__form__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 4.5% 0;
 }
 @media screen and (max-width: 480px) {
@@ -284,8 +295,11 @@ a {
   }
 }
 .contact-wrap__body__form__block__second__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 @media screen and (max-width: 480px) {
   .contact-wrap__body__form__block__second__input {
@@ -294,7 +308,7 @@ a {
 }
 .contact-wrap__body__form__block__second__input__one {
   font-weight: 500;
-  width: 50%;
+  width: 100%;
   margin-top: 5%;
 }
 @media screen and (max-width: 768px) {
@@ -308,12 +322,55 @@ a {
     margin-top: 5%;
   }
 }
-.contact-wrap__body__form__block__second__input__one:nth-of-type(3), .contact-wrap__body__form__block__second__input__one:nth-of-type(4) {
-  margin-top: 2.5%;
+.contact-wrap__body__form__block__second__input__one .wpcf7-list-item {
+  margin: 0 !important;
+  width: 50%;
+}
+.contact-wrap__body__form__block__second__input__one .wpcf7-list-item:nth-of-type(3), .contact-wrap__body__form__block__second__input__one .wpcf7-list-item:nth-of-type(4) {
+  margin-top: 2.5% !important;
 }
 @media screen and (max-width: 768px) {
-  .contact-wrap__body__form__block__second__input__one:nth-of-type(3), .contact-wrap__body__form__block__second__input__one:nth-of-type(4) {
-    margin-top: 5%;
+  .contact-wrap__body__form__block__second__input__one .wpcf7-list-item:nth-of-type(3), .contact-wrap__body__form__block__second__input__one .wpcf7-list-item:nth-of-type(4) {
+    margin-top: 5% !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contact-wrap__body__form__block__second__input__one .wpcf7-list-item:nth-of-type(2) {
+    margin-top: 5% !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contact-wrap__body__form__block__second__input__one .wpcf7-list-item {
+    width: 100%;
+  }
+}
+.contact-wrap__body__form__block__second__input__one .wpcf7-list-item input[type=radio] {
+  width: 2em;
+  height: 2em;
+  margin-right: 2.5%;
+  accent-color: #110800;
+}
+@media screen and (max-width: 768px) {
+  .contact-wrap__body__form__block__second__input__one .wpcf7-list-item input[type=radio] {
+    width: 1em;
+    height: 1em;
+  }
+}
+.contact-wrap__body__form__block__second__input__one .wpcf7-list-item .wpcf7-list-item-label {
+  font-weight: 500;
+  font-size: clamp(0.75rem, 0.648rem + 0.45vw, 1.125rem);
+  letter-spacing: clamp(-0.011rem, -0.01rem - 0.01vw, -0.017rem);
+  vertical-align: middle;
+}
+@media screen and (max-width: 768px) {
+  .contact-wrap__body__form__block__second__input__one .wpcf7-list-item .wpcf7-list-item-label {
+    font-size: clamp(0.5rem, -0.024rem + 1.74vw, 0.813rem);
+    letter-spacing: clamp(-0.007rem, -0.03vw, -0.012rem);
+  }
+}
+@media screen and (max-width: 480px) {
+  .contact-wrap__body__form__block__second__input__one .wpcf7-list-item .wpcf7-list-item-label {
+    font-size: 0.75rem;
   }
 }
 .contact-wrap__body__form__block__second__input__one input {
@@ -349,14 +406,12 @@ a {
   font-size: clamp(0.75rem, 0.648rem + 0.45vw, 1.125rem);
   letter-spacing: clamp(-0.011rem, -0.01rem - 0.01vw, -0.017rem);
   margin-top: 5%;
-  margin-left: -2.5%;
 }
 @media screen and (max-width: 768px) {
   .contact-wrap__body__form__block__third__label p {
     font-size: clamp(0.625rem, 0.311rem + 1.05vw, 0.813rem);
     letter-spacing: clamp(-0.009rem, -0.005rem - 0.02vw, -0.012rem);
     margin-top: 10%;
-    margin-left: 0;
   }
 }
 @media screen and (max-width: 480px) {
@@ -365,10 +420,10 @@ a {
   }
 }
 .contact-wrap__body__form__block__third__text {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   height: 24rem;
-  margin-left: -2.5%;
-  margin-right: -2.5%;
   margin-top: 3%;
   font-size: clamp(0.75rem, 0.648rem + 0.45vw, 1.125rem);
   letter-spacing: clamp(-0.011rem, -0.01rem - 0.01vw, -0.017rem);
@@ -377,11 +432,8 @@ a {
 }
 @media screen and (max-width: 768px) {
   .contact-wrap__body__form__block__third__text {
-    width: 95%;
     font-size: clamp(0.625rem, 0.311rem + 1.05vw, 0.813rem);
     letter-spacing: clamp(-0.009rem, -0.005rem - 0.02vw, -0.012rem);
-    margin-left: 0;
-    margin-right: 0;
   }
 }
 @media screen and (max-width: 480px) {
@@ -393,14 +445,12 @@ a {
   font-size: clamp(0.625rem, 0.557rem + 0.3vw, 0.875rem);
   letter-spacing: clamp(-0.009rem, -0.008rem + 0vw, -0.013rem);
   margin-top: 2.5%;
-  margin-left: -2.5%;
 }
 @media screen and (max-width: 768px) {
   .contact-wrap__body__form__block__fourth__policy p {
     font-size: clamp(0.438rem, 0.123rem + 1.05vw, 0.625rem);
     letter-spacing: clamp(-0.007rem, -0.002rem - 0.02vw, -0.009rem);
     margin-top: 7.5%;
-    margin-left: 0;
   }
 }
 @media screen and (max-width: 480px) {
@@ -412,6 +462,8 @@ a {
 }
 .contact-wrap__body__form__block__fourth__policy p a {
   text-decoration: underline;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
   transition: all 0.1s;
 }
 .contact-wrap__body__form__block__fourth__policy p a:hover {
@@ -422,19 +474,20 @@ a {
 }
 .contact-wrap__body__form__block__fourth__check {
   margin-top: 2.5%;
-  margin-left: -2.5%;
   font-size: clamp(0.75rem, 0.614rem + 0.61vw, 1.25rem);
   letter-spacing: clamp(-0.011rem, -0.009rem - 0.01vw, -0.019rem);
 }
 @media screen and (max-width: 768px) {
   .contact-wrap__body__form__block__fourth__check {
     margin-left: 0;
+    margin-top: 3.5%;
   }
 }
 @media screen and (max-width: 480px) {
   .contact-wrap__body__form__block__fourth__check {
     text-align: center;
     font-size: 1rem;
+    margin-top: 7.5%;
   }
 }
 .contact-wrap__body__form__btn {
@@ -449,68 +502,99 @@ a {
 }
 @media screen and (max-width: 480px) {
   .contact-wrap__body__form__btn {
-    margin: 15% auto 0;
+    margin: 10% auto 0;
     width: 60%;
   }
 }
 
-.contact-btn {
-  width: 100%;
-  display: block;
+#number.wpcf7-form-control.wpcf7-radio.inquiry-radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact-wrap__body__form__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+.contact-wrap__body__form__btn .contact-btn {
+  width: 100%; /* Set width to full width */
+  z-index: 1;
   color: #fff;
   background-color: #110800;
   cursor: pointer;
-  border: unset;
+  border: none;
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
   transition: all 0.7s;
   line-height: 3;
-}
-.contact-btn span:nth-of-type(1) {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; /* Remove default input styles */
+  text-align: center;
+  padding-right: 2.5rem; /* Add padding to make space for the icon */
   font-size: clamp(0.625rem, 0.386rem + 1.06vw, 1.5rem);
   letter-spacing: clamp(-0.013rem, -0.011rem - 0.01vw, -0.022rem);
+  position: relative; /* Required for pseudo-element positioning */
 }
 @media screen and (max-width: 480px) {
-  .contact-btn span:nth-of-type(1) {
+  .contact-wrap__body__form__btn .contact-btn {
     font-size: 1rem;
   }
 }
-.contact-btn .__icon-arrow {
-  margin-left: 5%;
-  vertical-align: middle;
-}
-.contact-btn .__icon-arrow svg {
-  width: 10%;
-}
-.contact-btn:hover {
+.contact-wrap__body__form__btn .contact-btn:hover {
   opacity: 0.7;
 }
 @media screen and (max-width: 768px) {
-  .contact-btn {
+  .contact-wrap__body__form__btn .contact-btn {
     line-height: 4;
   }
 }
 @media screen and (max-width: 480px) {
-  .contact-btn {
+  .contact-wrap__body__form__btn .contact-btn {
     line-height: 3;
   }
 }
+.contact-wrap__body__form__btn .__icon-arrow {
+  position: absolute;
+  z-index: 2;
+  right: 30%; /* Adjust right position as needed */
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none; /* Prevent icon from blocking clicks */
+  color: #fff;
+}
+.contact-wrap__body__form__btn .__icon-arrow svg {
+  width: 80%; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
 
-#check {
+/* チェックボックスを非表示にする */
+.contact-wrap__body__form__block__fourth input {
   display: none;
 }
 
-label[for=check] {
+/* ラベルのスタイル */
+.contact-wrap__body__form__block__fourth .wpcf7-list-item-label {
   position: relative;
-  padding-left: 30px;
   cursor: pointer;
   display: inline-block;
 }
-@media screen and (max-width: 768px) {
-  label[for=check] {
-    padding-left: 20px;
-  }
-}
 
-label[for=check]::before {
+/* チェックボックスの背景と枠線のスタイル */
+.contact-wrap__body__form__block__fourth .wpcf7-list-item-label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -521,65 +605,113 @@ label[for=check]::before {
   background-color: #fff;
 }
 @media screen and (max-width: 768px) {
-  label[for=check]::before {
+  .contact-wrap__body__form__block__fourth .wpcf7-list-item-label::before {
     width: 15px;
     height: 15px;
     top: 7.5px;
   }
 }
 @media screen and (max-width: 480px) {
-  label[for=check]::before {
+  .contact-wrap__body__form__block__fourth .wpcf7-list-item-label::before {
     top: 17px;
   }
 }
 
-label[for=check]::after {
-  content: "";
-  position: absolute;
-  top: 8.5px;
-  left: 3.5px;
-  width: 18.5px;
-  height: 6px;
-  border-left: 3px solid #333;
-  border-bottom: 3px solid #333;
-  transform: rotate(-45deg);
-  opacity: 0;
+.contact-wrap__body__form__block__fourth .wpcf7-form-control-wrap {
+  display: block;
 }
-@media screen and (max-width: 768px) {
-  label[for=check]::after {
-    top: 12px;
-    width: 10px;
-    height: 4px;
-  }
+
+.contact-wrap__body__form__block__fourth span.wpcf7-list-item {
+  margin: 0 30px 0 0; /* 項目右側の余白設定と、デフォルトの左側の余白を打ち消す */
+  position: relative;
+}
+
+.contact-wrap__body__form__block__fourth .wpcf7-list-item-label {
+  cursor: pointer; /* labelにhoverした時にカーソルを表示させる */
+  font-size: clamp(0.75rem, 0.614rem + 0.61vw, 1.25rem); /* 項目のフォントサイズ */
 }
 @media screen and (max-width: 480px) {
-  label[for=check]::after {
-    top: 22px;
+  .contact-wrap__body__form__block__fourth .wpcf7-list-item-label {
+    font-size: 1rem;
   }
 }
 
-#check:checked + label[for=check]::after {
+.contact-wrap__body__form__block__fourth input[type=checkbox] {
+  opacity: 0; /* デフォルトのチェックボックスを見えなくする */
+  position: absolute;
+}
+
+.contact-wrap__body__form__block__fourth .wpcf7-list-item-label::before {
+  /* チェックボックスのデザイン */
+  border: 1px solid #333;
+  content: "";
+  display: inline-block;
+  height: 25px;
+  margin-right: 15px;
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+  width: 25px;
+}
+@media screen and (max-width: 768px) {
+  .contact-wrap__body__form__block__fourth .wpcf7-list-item-label::before {
+    height: 15px;
+    width: 15px;
+  }
+}
+
+.contact-wrap__body__form__block__fourth .wpcf7-list-item-label::after {
+  /* チェックマークのデザイン */
+  content: "";
+  border: solid #333;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  height: 15px;
+  left: 8.5px;
+  position: absolute;
+  top: 2px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 7px;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s; /* チェックマークのフェードインをスムーズにする */
+}
+@media screen and (max-width: 768px) {
+  .contact-wrap__body__form__block__fourth .wpcf7-list-item-label::after {
+    width: 4px;
+    height: 10px;
+    left: 5px;
+    top: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contact-wrap__body__form__block__fourth .wpcf7-list-item-label::after {
+    top: 2px;
+  }
+}
+
+.contact-wrap__body__form__block__fourth input[type=checkbox]:checked + .wpcf7-list-item-label::after {
+  /* チェックアイコンの表示 */
   opacity: 1;
 }
 
-.label-check {
-  margin-left: 15px;
-  margin-top: 3%;
-  display: inline-block;
-  width: 150px;
-}
-@media screen and (max-width: 768px) {
-  .label-check {
-    margin-top: 5.5%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .label-check {
-    margin-top: 21.5%;
-    width: 65px;
-  }
+.footer h2, .footer a, .footer small {
+  color: #fff;
 }
 
-.footer h2, .footer a, .footer small {
+ul.bogo-language-switcher li:nth-of-type(1) {
+  color: #fff;
+}
+ul.bogo-language-switcher li:nth-of-type(1) a {
+  color: #fff;
+}
+
+ul.bogo-language-switcher li:nth-of-type(2) {
+  color: #fff;
+}
+ul.bogo-language-switcher li:nth-of-type(2) a {
   color: #fff;
 }

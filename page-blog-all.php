@@ -4,9 +4,23 @@
     <div class="top-wrap">
       <div class="top-wrap__ttl">
         <h1>
-          <span class="initial-text__sub">B</span>LOG<br />
-          <span class="ttl__sub">記事</span>
+          <span class="initial-text__sub">
+            <?php
+            $blog_initial_text = get_field('blog_initial_text');
+            echo $blog_initial_text ? $blog_initial_text : 'B';
+            ?></span><?php
+                      $blog_main_ttl = get_field('blog_main_ttl');
+                      echo $blog_main_ttl ? $blog_main_ttl : 'LOG';
+                      ?>
+          <br />
+          <span class="ttl__sub">
+            <?php
+            $blog_sub_ttl = get_field('blog_sub_ttl');
+            echo $blog_sub_ttl ? $blog_sub_ttl : '記事';
+            ?>
+          </span>
         </h1>
+
       </div>
     </div>
   </section>
@@ -29,13 +43,14 @@
       </nav>
     </div>
   </section> -->
+
   <section class="article __section3" id="article">
     <div class="article-wrap __inner2">
       <?php
       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
       $blog_query = new WP_Query(array(
         'post_type' => 'blog',
-        'posts_per_page' => 2,
+        'posts_per_page' => 5,
         'paged' => $paged,
         'post_status' => 'publish'
       ));

@@ -4,8 +4,21 @@
     <div class="top-wrap">
       <div class="top-wrap__ttl">
         <h1>
-          <span class="initial-text__sub">P</span>RIVACY POLICY<br />
-          <span class="ttl__sub"> プライバシーポリシー</span>
+          <span class="initial-text__sub">
+            <?php
+            $privacy_policy_initial_text = get_field('privacy_policy_initial_text');
+            echo $privacy_policy_initial_text ? $privacy_policy_initial_text : 'P';
+            ?></span><?php
+                      $privacy_policy_main_ttl = get_field('privacy_policy_main_ttl');
+                      echo $privacy_policy_main_ttl ? $privacy_policy_main_ttl : 'RIVACY POLICY';
+                      ?>
+          <br />
+          <span class="ttl__sub">
+            <?php
+            $privacy_policy_sub_ttl = get_field('privacy_policy_sub_ttl');
+            echo $privacy_policy_sub_ttl ? $privacy_policy_sub_ttl : 'プライバシーポリシー';
+            ?>
+          </span>
         </h1>
       </div>
     </div>
@@ -29,16 +42,25 @@
       </nav>
     </div>
   </section> -->
+
   <section class="con __section6" id="con">
     <div class="con-wrap __inner2">
       <div class="con-wrap__txt">
         <p>
-          Blocq,
-          Inc.（以下，「当社」といいます。）は，本ウェブサイト上で提供するサービス（以下,「本サービス」といいます。）における，
-          ユーザーの個人情報の取扱いについて，以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）を定めます。
+          <?php
+          $privacy_policy_text = get_field('privacy_policy_text');
+          echo $privacy_policy_text ? $privacy_policy_text : 'Blocq, Inc.（以下，「当社」といいます。）は，本ウェブサイト上で提供するサービス（以下,「本サービス」といいます。）における， ユーザーの個人情報の取扱いについて，以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）を定めます。';
+          ?>
         </p>
       </div>
-      <div class="con-wrap__policy"></div>
+      <div class="con-wrap__policy">
+        <p>
+          <?php
+          $privacy_policy_text_2 = get_field('privacy_policy_text_2');
+          echo $privacy_policy_text_2 ? $privacy_policy_text_2 : 'プライバシーポリシーの文章が入ります。プライバシーポリシーの文章が入ります。プライバシーポリシーの文章が入ります。プライバシーポリシーの文章が入ります。プライバシーポリシーの文章が入ります。プライバシーポリシーの文章が入ります。プライバシーポリシーの文章が入ります。プライバシーポリシーの文章が入ります。プライバシーポリシーの文章が入ります。プライバシーポリシーの文章が入ります。プライバシーポリシーの文章が入ります。プライバシーポリシーの文章が入ります。プライバシーポリシーの文章が入ります。';
+          ?>
+        </p>
+      </div>
       <div class="b-btn c-btn">
         <a href="javascript:void(0)" id="backButton">
           <span class="__icon-arrow__rev">

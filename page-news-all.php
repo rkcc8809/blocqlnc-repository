@@ -4,8 +4,21 @@
     <div class="top-wrap">
       <div class="top-wrap__ttl">
         <h1>
-          <span class="initial-text__sub">N</span>EWS<br />
-          <span class="ttl__sub">お知らせ</span>
+          <span class="initial-text__sub">
+            <?php
+            $news_initial_text = get_field('news_initial_text');
+            echo $news_initial_text ? $news_initial_text : 'N';
+            ?></span><?php
+          $news_main_ttl = get_field('news_main_ttl');
+          echo $news_main_ttl ? $news_main_ttl : 'EWS';
+          ?>
+          <br />
+          <span class="ttl__sub">
+            <?php
+            $news_sub_ttl = get_field('news_sub_ttl');
+            echo $news_sub_ttl ? $news_sub_ttl : 'お知らせ';
+            ?>
+          </span>
         </h1>
       </div>
     </div>
@@ -29,6 +42,7 @@
       </nav>
     </div>
   </section> -->
+
   <section class="article __section3" id="article">
     <div class="article-wrap __inner2">
       <?php

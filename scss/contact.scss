@@ -210,7 +210,7 @@ a {
             }
             &__one {
               font-weight: 500;
-              width: 50%;
+              width: 100%;
               margin-top: 5%;
               @include g.mq(tab) {
                 margin-top: 6%;
@@ -219,13 +219,50 @@ a {
                 width: 100%;
                 margin-top: 5%;
               }
-              &:nth-of-type(3),
-              &:nth-of-type(4) {
-                margin-top: 2.5%;
-                @include g.mq(tab) {
-                  margin-top: 5%;
+              & .wpcf7-list-item {
+                margin: 0 !important;
+                width: 50%;
+                &:nth-of-type(3),
+                &:nth-of-type(4) {
+                  margin-top: 2.5% !important;
+                  @include g.mq(tab) {
+                    margin-top: 5% !important;
+                  }
+                }
+                &:nth-of-type(2) {
+                  @include g.mq(sp) {
+                    margin-top: 5% !important;
+                  }
+                }
+
+                @include g.mq(sp) {
+                  width: 100%;
+                }
+
+                input[type="radio"] {
+                  width: 2em;
+                  height: 2em;
+                  margin-right: 2.5%;
+                  accent-color: g.$background-main;
+                  @include g.mq(tab) {
+                    width: 1em;
+                    height: 1em;
+                  }
+                }
+
+                .wpcf7-list-item-label {
+                  font-weight: 500;
+                  @include g.font-12-18__15;
+                  vertical-align: middle;
+                  @include g.mq(tab) {
+                    @include g.font-8-13__15__tab;
+                  }
+                  @include g.mq(sp) {
+                    font-size: 0.75rem;
+                  }
                 }
               }
+
               & input {
                 width: 2em;
                 height: 2em;
@@ -255,11 +292,9 @@ a {
             & p {
               @include g.font-12-18__15;
               margin-top: 5%;
-              margin-left: -2.5%;
               @include g.mq(tab) {
                 @include g.font-10-13__15__tab;
                 margin-top: 10%;
-                margin-left: 0;
               }
               @include g.mq(sp) {
                 font-size: 1rem;
@@ -267,19 +302,15 @@ a {
             }
           }
           &__text {
+            box-sizing: border-box;
             width: 100%;
             height: 24rem;
-            margin-left: -2.5%;
-            margin-right: -2.5%;
             margin-top: 3%;
             @include g.font-12-18__15;
             line-height: 1.6;
             padding: 1.5% 2.5%;
             @include g.mq(tab) {
-              width: 95%;
               @include g.font-10-13__15__tab;
-              margin-left: 0;
-              margin-right: 0;
             }
             @include g.mq(sp) {
               font-size: 0.875rem;
@@ -291,11 +322,9 @@ a {
             & p {
               @include g.font-10-14__15;
               margin-top: 2.5%;
-              margin-left: -2.5%;
               @include g.mq(tab) {
                 @include g.font-7-10__15__tab;
                 margin-top: 7.5%;
-                margin-left: 0;
               }
               @include g.mq(sp) {
                 text-align: center;
@@ -316,14 +345,15 @@ a {
           }
           &__check {
             margin-top: 2.5%;
-            margin-left: -2.5%;
             @include g.font-12-20__15;
             @include g.mq(tab) {
               margin-left: 0;
+              margin-top: 3.5%;
             }
             @include g.mq(sp) {
               text-align: center;
               font-size: 1rem;
+              margin-top: 7.5%;
             }
           }
         }
@@ -335,7 +365,7 @@ a {
             width: 40%;
           }
           @include g.mq(sp) {
-            margin: 15% auto 0;
+            margin: 10% auto 0;
             width: 60%;
           }
         }
@@ -344,54 +374,74 @@ a {
   }
 }
 
-.contact-btn {
-  width: 100%;
-  display: block;
-  color: g.$cWhite;
-  background-color: g.$background-main;
-  cursor: pointer;
-  border: unset;
-  transition: all 0.7s;
-  line-height: 3;
-  & span:nth-of-type(1) {
+#number.wpcf7-form-control.wpcf7-radio.inquiry-radio {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-wrap__body__form__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .contact-btn {
+    width: 100%; /* Set width to full width */
+    z-index: 1;
+    color: g.$cWhite;
+    background-color: g.$background-main;
+    cursor: pointer;
+    border: none;
+    transition: all 0.7s;
+    line-height: 3;
+    appearance: none; /* Remove default input styles */
+    text-align: center;
+    padding-right: 2.5rem; /* Add padding to make space for the icon */
     @include g.font-14-24__15;
     @include g.mq(sp) {
       font-size: 1rem;
     }
-  }
-  & .__icon-arrow {
-    margin-left: 5%;
-    vertical-align: middle;
-    & svg {
-      width: 10%;
+    &:hover {
+      opacity: 0.7;
     }
+    @include g.mq(tab) {
+      line-height: 4;
+    }
+    @include g.mq(sp) {
+      line-height: 3;
+    }
+    position: relative; /* Required for pseudo-element positioning */
   }
-  &:hover {
-    opacity: 0.7;
-  }
-  @include g.mq(tab) {
-    line-height: 4;
-  }
-  @include g.mq(sp) {
-    line-height: 3;
+
+  .__icon-arrow {
+    position: absolute;
+    z-index: 2;
+    right: 30%; /* Adjust right position as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent icon from blocking clicks */
+    color: g.$cWhite;
+    & svg {
+      width: 80%; /* Adjust width as needed */
+      height: auto; /* Maintain aspect ratio */
+    }
   }
 }
 
-#check {
+/* チェックボックスを非表示にする */
+.contact-wrap__body__form__block__fourth input {
   display: none;
 }
 
-label[for="check"] {
+/* ラベルのスタイル */
+.contact-wrap__body__form__block__fourth .wpcf7-list-item-label {
   position: relative;
-  padding-left: 30px;
   cursor: pointer;
   display: inline-block;
-  @include g.mq(tab) {
-    padding-left: 20px;
-  }
 }
 
-label[for="check"]::before {
+/* チェックボックスの背景と枠線のスタイル */
+.contact-wrap__body__form__block__fourth .wpcf7-list-item-label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -410,49 +460,100 @@ label[for="check"]::before {
   }
 }
 
-label[for="check"]::after {
-  content: "";
+.contact-wrap__body__form__block__fourth .wpcf7-form-control-wrap {
+  display: block;
+}
+.contact-wrap__body__form__block__fourth span.wpcf7-list-item {
+  margin: 0 30px 0 0; /* 項目右側の余白設定と、デフォルトの左側の余白を打ち消す */
+  position: relative;
+}
+.contact-wrap__body__form__block__fourth .wpcf7-list-item-label {
+  cursor: pointer; /* labelにhoverした時にカーソルを表示させる */
+  font-size: clamp(
+    0.75rem,
+    0.614rem + 0.61vw,
+    1.25rem
+  ); /* 項目のフォントサイズ */
+  @include g.mq(sp) {
+    font-size: 1rem;
+  }
+}
+.contact-wrap__body__form__block__fourth input[type="checkbox"] {
+  opacity: 0; /* デフォルトのチェックボックスを見えなくする */
   position: absolute;
-  top: 8.5px;
-  left: 3.5px;
-  width: 18.5px;
-  height: 6px;
-  border-left: 3px solid #333;
-  border-bottom: 3px solid #333;
-  transform: rotate(-45deg);
-  opacity: 0;
+}
+.contact-wrap__body__form__block__fourth .wpcf7-list-item-label::before {
+  /* チェックボックスのデザイン */
+  border: 1px solid #333;
+  content: "";
+  display: inline-block;
+  height: 25px;
+  margin-right: 15px;
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+  width: 25px;
   @include g.mq(tab) {
-    top: 12px;
-    width: 10px;
-    height: 4px;
+    height: 15px;
+    width: 15px;
+  }
+}
+.contact-wrap__body__form__block__fourth .wpcf7-list-item-label::after {
+  /* チェックマークのデザイン */
+  content: "";
+  border: solid #333;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  height: 15px;
+  left: 8.5px;
+  position: absolute;
+  top: 2px;
+  transform: rotate(45deg);
+  width: 7px;
+  opacity: 0;
+  transition: opacity 0.2s; /* チェックマークのフェードインをスムーズにする */
+  @include g.mq(tab) {
+    width: 4px;
+    height: 10px;
+    left: 5px;
+    top: 0;
   }
   @include g.mq(sp) {
-    top: 22px;
+    top: 2px;
   }
 }
 
-#check:checked + label[for="check"]::after {
+.contact-wrap__body__form__block__fourth
+  input[type="checkbox"]:checked
+  + .wpcf7-list-item-label::after {
+  /* チェックアイコンの表示 */
   opacity: 1;
 }
-
-.label-check {
-  margin-left: 15px;
-  margin-top: 3%;
-  display: inline-block;
-  width: 150px;
-  @include g.mq(tab) {
-    margin-top: 5.5%;
-  }
-  @include g.mq(sp) {
-    margin-top: 21.5%;
-    width: 65px;
-  }
-}
+// .contact-wrap__body__form__block__fourth
+//   input[type="checkbox"]:checked
+//   + label::before {
+//   /* チェックしたボックスの背景色を設定 */
+//   background-color: #ffffbc;
+// }
 
 .footer {
   & h2,
   & a,
   & small {
+    color: g.$cWhite;
+  }
+}
+
+ul.bogo-language-switcher li:nth-of-type(1) {
+  color: g.$cWhite;
+  & a {
+    color: g.$cWhite;
+  }
+}
+
+ul.bogo-language-switcher li:nth-of-type(2) {
+  color: g.$cWhite;
+  & a {
     color: g.$cWhite;
   }
 }

@@ -4,9 +4,23 @@
     <div class="top-wrap">
       <div class="top-wrap__ttl">
         <h1>
-          <span class="initial-text__sub">B</span>LOG<br />
-          <span class="ttl__sub">記事</span>
+          <span class="initial-text__sub">
+            <?php
+            $single_blog_initial_text = get_field('single_blog_initial_text');
+            echo $single_blog_initial_text ? $single_blog_initial_text : 'B';
+            ?></span><?php
+          $single_blog_main_ttl = get_field('single_blog_main_ttl');
+          echo $single_blog_main_ttl ? $single_blog_main_ttl : 'LOG';
+          ?>
+          <br />
+          <span class="ttl__sub">
+            <?php
+            $single_blog_sub_ttl = get_field('single_blog_sub_ttl');
+            echo $single_blog_sub_ttl ? $single_blog_sub_ttl : '記事';
+            ?>
+          </span>
         </h1>
+
       </div>
     </div>
   </section>
@@ -35,6 +49,7 @@
       </nav>
     </div>
   </section> -->
+
   <section class="content __section3" id="content">
     <article class="content-wrap __inner2">
       <div class="content-wrap__date">

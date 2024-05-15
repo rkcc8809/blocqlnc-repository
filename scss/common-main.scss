@@ -557,7 +557,7 @@
     left: 30.5%;
     transform: translateY(-50%) translateX(-40%);
     @include g.mq(sp) {
-      top: 62%;
+      top: 59%;
     }
     & li {
       & a {
@@ -852,4 +852,42 @@
       }
     }
   }
+}
+
+.language-switcher {
+  display: inline-block;
+  margin-left: 20px; /* 必要に応じて調整 */
+}
+
+.language-switcher a {
+  padding: 5px 10px;
+  color: #333; /* テキストカラー */
+  text-decoration: none;
+  border: 1px solid #ccc; /* 枠線 */
+  border-radius: 3px;
+  background-color: #f9f9f9; /* 背景色 */
+}
+
+.language-switcher a:hover {
+  background-color: #e0e0e0; /* ホバー時の背景色 */
+}
+
+ul.bogo-language-switcher li:nth-of-type(1) {
+  position: fixed;
+  top: 105px;
+  right: 0;
+  z-index: 10000;
+  background-color: g.$background-main;
+  line-height: 2.2;
+  width: 100px;
+}
+
+ul.bogo-language-switcher li:nth-of-type(2) {
+  position: fixed;
+  top: 140px;
+  right: 0;
+  z-index: 10000;
+  background-color: g.$background-main;
+  line-height: 2.2;
+  width: 100px;
 }

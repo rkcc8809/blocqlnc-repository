@@ -3,21 +3,21 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title><?php bloginfo('name'); ?></title>
+  <title><?php echo bloginfo('name'); ?></title>
   <meta name="description" content="<?php bloginfo('description'); ?>" />
   <meta name="keywords" content="<?php echo get_post_meta($post->ID, 'keywords', true); ?>" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- OGP -->
-  <meta property="og:url" content="本番環境URL" />
+  <meta property="og:url" content="https://xxdesign.site/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="BlocQ,lnc." />
-  <meta property="og:description" content="仮のページ概要です。" />
+  <meta property="og:description" content="Blocq, Inc. は、ブロックチェーン技術と量子コンピューティングの活用を目指すスタートアップです。" />
   <meta property="og:site_name" content="BlocQ,lnc." />
-  <meta property="og:image" content="本番環境URL/img/logo.png" />
+  <meta property="og:image" content="https://xxdesign.site/img/logo.png" />
   <!-- ICON -->
   <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/本番環境URL/img/logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/https://xxdesign.site/img/logo.png" />
   <!-- CSS-外部 -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,29 +42,19 @@
         </a>
       </div>
       <nav class="header-wrap__nav">
-        <!-- <ul class="header-wrap__nav__list">
-          <li class="header-wrap__nav__list__item">
-            <a href="/"> HOME </a>
-          </li>
-          <li class="header-wrap__nav__list__item">
-            <a href="service.html"> SERVICE </a>
-          </li>
-          <li class="header-wrap__nav__list__item">
-            <a href="company.html"> COMPANY </a>
-          </li>
-          <li class="header-wrap__nav__list__item">
-            <a href="news-all.html"> NEWS </a>
-          </li>
-          <li class="header-wrap__nav__list__item">
-            <a href="blog-all.html"> BLOG </a>
-          </li>
-          <li class="header-wrap__nav__list__item__contact">
-            <a href="contact.html"> Contact us </a>
-          </li>
-        </ul> -->
         <?php
+        // 現在の言語を取得
+        $current_language = get_locale();
+
+        // デスクトップメニューのスラッグを設定
+        if ($current_language === 'en_US') {
+          $menu_name = 'menu-en';
+        } else {
+          $menu_name = 'menu';
+        }
+
         $args = array(
-          'menu' => 'menu', // 管理画面で作成したメニュー名
+          'menu' => $menu_name, // 言語に応じたメニュー名
           'menu_class' => 'header-wrap__nav__list', // メニューを構成するulタグのクラス名
           'container' => false, // <ul>タグを囲んでいる<div>タグを削除
         );
@@ -72,6 +62,8 @@
         // カスタムメニューを表示
         wp_nav_menu($args);
         ?>
+
+
       </nav>
       <div class="h-open">
         <span></span>
@@ -88,24 +80,38 @@
             </li>
           </ul>
           <ul id="h-nav__list__second">
-            <!-- <li><a href="/">HOME</a></li>
-            <li><a href="service.html">SERVICE</a></li>
-            <li><a href="company.html">COMPANY</a></li>
-            <li><a href="news-all.html">NEWS</a></li>
-            <li><a href="blog-all.html">BLOG</a></li> -->
-            <?php wp_nav_menu(array(
-              'theme_location' => 'sp_menu_links',
+            <?php
+            // モバイルメニューのリンク部分のスラッグを設定
+            if ($current_language === 'en_US') {
+              $menu_sp_links = 'sp_menu_links_en';
+            } else {
+              $menu_sp_links = 'sp_menu_links';
+            }
+
+            $args_sp_links = array(
+              'theme_location' => $menu_sp_links, // 言語に応じたメニュー名
               'container' => false,
               'items_wrap' => '%3$s'
-            )); ?>
+            );
+            wp_nav_menu($args_sp_links);
+            ?>
           </ul>
           <ul id="h-nav__list__third">
-            <!-- <li><a href="contact.html">Contact us</a></li> -->
-            <?php wp_nav_menu(array(
-              'theme_location' => 'sp_menu_contact',
+            <?php
+            // モバイルメニューの連絡先部分のスラッグを設定
+            if ($current_language === 'en_US') {
+              $menu_sp_contact = 'sp_menu_contact_en';
+            } else {
+              $menu_sp_contact = 'sp_menu_contact';
+            }
+
+            $args_sp_contact = array(
+              'theme_location' => $menu_sp_contact, // 言語に応じたメニュー名
               'container' => false,
               'items_wrap' => '%3$s'
-            )); ?>
+            );
+            wp_nav_menu($args_sp_contact);
+            ?>
           </ul>
         </div>
       </nav>

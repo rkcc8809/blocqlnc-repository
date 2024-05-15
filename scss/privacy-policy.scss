@@ -39,8 +39,6 @@ a {
       height: 60vh;
     }
 
-
-
     &__ttl {
       position: absolute;
       top: 50%;
@@ -53,7 +51,6 @@ a {
         top: 77.5%;
         left: 10%;
       }
-
 
       & h1 {
         @include g.font-en-b;
@@ -90,7 +87,19 @@ a {
     }
     &__policy {
       width: 100%;
-      height: 0;
+      height: auto;
+      border: 1px solid #333;
+      margin-top: 5%;
+      padding: 4%;
+      box-sizing: border-box;
+      & p {
+        @include g.font-10-16__15;
+        line-height: 1.5;
+        font-weight: 500;
+        @include g.mq(sp) {
+          line-height: 2;
+        }
+      }
     }
     & .b-btn {
       margin-top: 3.5%;
@@ -122,6 +131,20 @@ a {
   & h2,
   & a,
   & small {
+    color: g.$cWhite;
+  }
+}
+
+ul.bogo-language-switcher li:nth-of-type(1) {
+  color: g.$cWhite;
+  & a {
+    color: g.$cWhite;
+  }
+}
+
+ul.bogo-language-switcher li:nth-of-type(2) {
+  color: g.$cWhite;
+  & a {
     color: g.$cWhite;
   }
 }

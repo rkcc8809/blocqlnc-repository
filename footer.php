@@ -1,3 +1,20 @@
+<?php
+// 現在の言語を取得
+$current_language = get_locale();
+
+// 言語に応じたフッター設定ページのスラッグを設定
+if ($current_language === 'en_US') {
+  $footer_page_slug = 'footer-setting-en';
+  $footer_menu_name = 'footer_menu-en';
+} else {
+  $footer_page_slug = 'footer-setting';
+  $footer_menu_name = 'footer_menu';
+}
+
+// フッター設定ページのIDを取得
+$footer_page_id = get_page_by_path($footer_page_slug)->ID;
+?>
+
 <footer class="footer" id="footer">
   <div class="footer-wrap __inner">
     <div class="footer-wrap__btn">
@@ -12,13 +29,43 @@
     <div class="footer-wrap__con">
       <div class="footer-wrap__con__left">
         <h2>
-          GET IN TOUCH WITH US
-          <span>お気軽にお問い合わせください。</span>
+          <?php
+          $footer_text_1 = get_field('footer_text_1', $footer_page_id);
+          echo $footer_text_1 ? $footer_text_1 : 'GET IN TOUCH WITH US';
+          ?>
+          <span>
+            <?php
+            $footer_text_2 = get_field('footer_text_2', $footer_page_id);
+            echo $footer_text_2 ? $footer_text_2 : 'お気軽にお問い合わせください。';
+            ?>
+          </span>
         </h2>
       </div>
       <div class="footer-wrap__con__right">
         <div class="footer-wrap__con__right__btn">
-          <a href="<?php echo get_permalink(get_page_by_path('contact us')->ID); ?>"> Contact us </a>
+          <?php
+          // Bogoの現在の言語を取得
+          if (function_exists('bogo_get_current_language')) {
+            $current_language = bogo_get_current_language();
+          } else {
+            $current_language = 'ja'; // デフォルトの言語を設定
+          }
+
+          // 言語に応じたACFフィールドからリンクを取得
+          if ($current_language == 'en') {
+            $contact_link = get_field('contact_link_en');
+          } else {
+            $contact_link = get_field('contact_link_jp');
+          }
+
+          // リンクが設定されているか確認
+          if ($contact_link) :
+            $link_url = $contact_link['url'];
+          ?>
+            <a href="<?php echo esc_url($link_url); ?>">Contact us</a>
+          <?php else : ?>
+            <a href="<?php echo esc_url(get_permalink(get_page_by_path('contact us')->ID)); ?>">Contact us</a>
+          <?php endif; ?>
         </div>
       </div>
     </div>
@@ -28,30 +75,18 @@
           <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="ロゴ画像" />
         </a>
         <a href="<?php echo get_permalink(get_page_by_path('privacy policy')->ID); ?>" class="footer-wrap__link__logo__second">
-          <p>プライバシーポリシー</p>
+          <p>
+            <?php
+            $footer_privacy_policy = get_field('footer_privacy_policy', $footer_page_id);
+            echo $footer_privacy_policy ? $footer_privacy_policy : 'プライバシーポリシー';
+            ?>
+          </p>
         </a>
       </div>
       <nav class="footer-wrap__link__nav">
-        <!-- <ul class="footer-wrap__link__nav__list">
-          <li class="footer-wrap__link__nav__list__item">
-            <a href="/">HOME</a>
-          </li>
-          <li class="footer-wrap__link__nav__list__item">
-            <a href="service.html">SERVICE</a>
-          </li>
-          <li class="footer-wrap__link__nav__list__item">
-            <a href="company.html">COMPANY</a>
-          </li>
-          <li class="footer-wrap__link__nav__list__item">
-            <a href="news-all.html">NEWS</a>
-          </li>
-          <li class="footer-wrap__link__nav__list__item">
-            <a href="blog-all.html">BLOG</a>
-          </li>
-        </ul> -->
         <?php
         $args = array(
-          'menu' => 'footer_menu', // 管理画面で作成したメニュー名
+          'menu' => $footer_menu_name, // 言語に応じたメニュー名
           'menu_class' => 'footer-wrap__link__nav__list', // メニューを構成するulタグのクラス名
           'container' => false, // <ul>タグを囲んでいる<div>タグを削除
         );
@@ -61,7 +96,12 @@
       </nav>
     </div>
     <div class="footer-wrap__copyright">
-      <small>© Blocq, Inc.2024.</small>
+      <small>
+        <?php
+        $footer_copyright = get_field('footer_copyright', $footer_page_id);
+        echo $footer_copyright ? $footer_copyright : '© Blocq, Inc.2024.';
+        ?>
+      </small>
     </div>
   </div>
 </footer>

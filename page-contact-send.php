@@ -4,8 +4,21 @@
     <div class="top-wrap">
       <div class="top-wrap__ttl">
         <h1>
-          <span class="initial-text__sub">C</span>ONTACT<br />
-          <span class="ttl__sub">お問い合わせ</span>
+          <span class="initial-text__sub">
+            <?php
+            $contact_send_initial_text = get_field('contact_send_initial_text');
+            echo $contact_send_initial_text ? $contact_send_initial_text : 'C';
+            ?></span><?php
+                      $contact_send_main_ttl = get_field('contact_send_main_ttl');
+                      echo $contact_send_main_ttl ? $contact_send_main_ttl : 'ONTACT';
+                      ?>
+          <br />
+          <span class="ttl__sub">
+            <?php
+            $contact_send_sub_ttl = get_field('contact_send_sub_ttl');
+            echo $contact_send_sub_ttl ? $contact_send_sub_ttl : 'お問い合わせ';
+            ?>
+          </span>
         </h1>
       </div>
     </div>
@@ -29,13 +42,30 @@
       </nav>
     </div>
   </section> -->
+
   <section class="con __section4" id="con">
     <div class="con-wrap __inner">
       <div class="con-wrap__txt">
         <p>
-          フォームが送信されました。<br />
-          後ほど担当者よりご連絡差し上げます。<br />
-          なお、入力いただきましたお客様の個人情報・相談内容は<br class="__sp" />弊社にて厳重に取り扱い致します。
+          <?php
+          $contact_send_text_1 = get_field('contact_send_text_1');
+          echo $contact_send_text_1 ? $contact_send_text_1 : 'フォームが送信されました。';
+          ?>
+          <br />
+          <?php
+          $contact_send_text_2 = get_field('contact_send_text_2');
+          echo $contact_send_text_2 ? $contact_send_text_2 : '後ほど担当者よりご連絡差し上げます。';
+          ?>
+          <br />
+          <?php
+          $contact_send_text_3 = get_field('contact_send_text_3');
+          echo $contact_send_text_3 ? $contact_send_text_3 : 'なお、入力いただきましたお客様の個人情報・相談内容は';
+          ?>
+          <br class="__sp" />
+          <?php
+          $contact_send_text_4 = get_field('contact_send_text_4');
+          echo $contact_send_text_4 ? $contact_send_text_4 : '弊社にて厳重に取り扱い致します。';
+          ?>
         </p>
       </div>
       <div class="b-btn c-btn">

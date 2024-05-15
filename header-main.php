@@ -40,29 +40,19 @@
         </a>
       </div>
       <nav class="header-wrap__nav">
-        <!-- <ul class="header-wrap__nav__list">
-          <li class="header-wrap__nav__list__item">
-            <a href="/"> HOME </a>
-          </li>
-          <li class="header-wrap__nav__list__item">
-            <a href="service.html"> SERVICE </a>
-          </li>
-          <li class="header-wrap__nav__list__item">
-            <a href="company.html"> COMPANY </a>
-          </li>
-          <li class="header-wrap__nav__list__item">
-            <a href="news-all.html"> NEWS </a>
-          </li>
-          <li class="header-wrap__nav__list__item">
-            <a href="blog-all.html"> BLOG </a>
-          </li>
-          <li class="header-wrap__nav__list__item__contact">
-            <a href="contact.html"> Contact us </a>
-          </li>
-        </ul> -->
         <?php
+        // 現在の言語を取得
+        $current_language = get_locale();
+
+        // デスクトップメニューのスラッグを設定
+        if ($current_language === 'en_US') {
+          $menu_name = 'menu-en';
+        } else {
+          $menu_name = 'menu';
+        }
+
         $args = array(
-          'menu' => 'menu', // 管理画面で作成したメニュー名
+          'menu' => $menu_name, // 言語に応じたメニュー名
           'menu_class' => 'header-wrap__nav__list', // メニューを構成するulタグのクラス名
           'container' => false, // <ul>タグを囲んでいる<div>タグを削除
         );
@@ -70,6 +60,8 @@
         // カスタムメニューを表示
         wp_nav_menu($args);
         ?>
+
+
       </nav>
       <div class="h-open">
         <span></span>
@@ -86,24 +78,38 @@
             </li>
           </ul>
           <ul id="h-nav__list__second">
-            <!-- <li><a href="/">HOME</a></li>
-            <li><a href="service.html">SERVICE</a></li>
-            <li><a href="company.html">COMPANY</a></li>
-            <li><a href="news-all.html">NEWS</a></li>
-            <li><a href="blog-all.html">BLOG</a></li> -->
-            <?php wp_nav_menu(array(
-              'theme_location' => 'sp_menu_links',
+            <?php
+            // モバイルメニューのリンク部分のスラッグを設定
+            if ($current_language === 'en_US') {
+              $menu_sp_links = 'sp_menu_links_en';
+            } else {
+              $menu_sp_links = 'sp_menu_links';
+            }
+
+            $args_sp_links = array(
+              'theme_location' => $menu_sp_links, // 言語に応じたメニュー名
               'container' => false,
               'items_wrap' => '%3$s'
-            )); ?>
+            );
+            wp_nav_menu($args_sp_links);
+            ?>
           </ul>
           <ul id="h-nav__list__third">
-            <!-- <li><a href="contact.html">Contact us</a></li> -->
-            <?php wp_nav_menu(array(
-              'theme_location' => 'sp_menu_contact',
+            <?php
+            // モバイルメニューの連絡先部分のスラッグを設定
+            if ($current_language === 'en_US') {
+              $menu_sp_contact = 'sp_menu_contact_en';
+            } else {
+              $menu_sp_contact = 'sp_menu_contact';
+            }
+
+            $args_sp_contact = array(
+              'theme_location' => $menu_sp_contact, // 言語に応じたメニュー名
               'container' => false,
               'items_wrap' => '%3$s'
-            )); ?>
+            );
+            wp_nav_menu($args_sp_contact);
+            ?>
           </ul>
         </div>
       </nav>

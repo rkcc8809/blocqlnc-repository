@@ -82,3 +82,5 @@ $(document).ready(function() {
         $('html, body').animate({ scrollTop: 0 }, 'smooth'); // Smoothly scroll to the top
     });
 });
+
+

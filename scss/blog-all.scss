@@ -129,6 +129,7 @@ a {
         justify-content: center;
         &__item {
           width: 9%;
+          white-space: nowrap;
           @include g.mq(sp) {
             width: 13%;
           }
@@ -170,6 +171,20 @@ a {
   & h2,
   & a,
   & small {
+    color: g.$cWhite;
+  }
+}
+
+ul.bogo-language-switcher li:nth-of-type(1) {
+  color: g.$cWhite;
+  & a {
+    color: g.$cWhite;
+  }
+}
+
+ul.bogo-language-switcher li:nth-of-type(2) {
+  color: g.$cWhite;
+  & a {
     color: g.$cWhite;
   }
 }
